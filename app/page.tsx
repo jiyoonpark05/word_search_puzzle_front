@@ -1,6 +1,10 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import * as css from "./page.css";
 
 export default function Home() {
-  return <main className={styles.main}></main>;
+  return (
+    <div className={css.wrapper}>
+      <div>title area</div>
+      <div>play button</div>
+    </div>
+  );
 }
