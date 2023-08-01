@@ -10,7 +10,6 @@ export function Bunny(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/models/Bunny.gltf");
   const { actions } = useAnimations(animations, group);
-  const [state, setState] = useState(["default", "greating", "yes"]);
 
   useEffect(() => {
     actions["Idle"]?.reset().fadeIn(0.5).play();
