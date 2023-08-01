@@ -1,4 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
-export const wrapper = style({});
+export const wrapper = style({
+  height: "100vh",
+});
