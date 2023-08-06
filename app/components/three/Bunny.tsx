@@ -12,12 +12,33 @@ export function Bunny(props) {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    actions["Idle"]?.reset().fadeIn(0.5).play();
-    return () => actions["Idle"]?.fadeOut(0.5);
-  }, []);
+    // default movement
+    if (props.state == "default") {
+      actions["Idle"]?.reset().fadeIn(0.5).play();
+      return () => actions["Idle"]?.fadeOut(0.5);
+    }
+    // say Hi when it clicked
+    if (props.state == "greeting") {
+      actions["Idle"]?.reset().fadeIn(0.5).stop();
+      actions["Wave"]?.reset().fadeIn(0.5).play();
+
+      setTimeout(() => {
+        actions["Wave"]?.reset().fadeOut(0.5).stop();
+        props.setState("default");
+      }, 1500);
+      return () => actions["Wave"]?.fadeOut(0.5);
+    }
+  }, [props.state]);
+
+  console.log(actions);
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group
+      ref={group}
+      {...props}
+      dispose={null}
+      onClick={(e) => props.setState("greeting")}
+    >
       <group name="Scene">
         <group name="CharacterArmature">
           <primitive object={nodes.Root} />

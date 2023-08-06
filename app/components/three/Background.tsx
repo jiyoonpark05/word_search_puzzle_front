@@ -6,7 +6,7 @@ export const Background = () => {
 
   return (
     <>
-      <OrbitControls />
+      <OrbitControls enableZoom={false} enableRotate={false} />
       <mesh>
         <sphereGeometry args={[5, 64, 64]} />
         <meshStandardMaterial map={texture} side={THREE.BackSide} />
