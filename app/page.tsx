@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div className={css.wrapper}>
       <ThreeCanvas />
+      <div>?</div>
     </div>
   );
 }
