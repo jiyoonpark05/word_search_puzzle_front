@@ -6,9 +6,20 @@ Command: npx gltfjsx@6.2.10 public/models/Bunny.gltf -o app/components/three/Bun
 import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
-export function Bunny(props) {
+type GLTFResult = {
+  nodes: {
+    Pyramid: THREE.Mesh;
+  };
+  materials: {
+    ["default"]: THREE.MeshStandardMaterial;
+  };
+};
+export function Bunny(props: any) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/models/Bunny.gltf");
+  const { nodes, materials, animations } = useGLTF(
+    "/models/Bunny.gltf"
+  ) as GLTFResult;
+
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
@@ -29,8 +40,6 @@ export function Bunny(props) {
       return () => actions["Wave"]?.fadeOut(0.5);
     }
   }, [props.state]);
-
-  console.log(actions);
 
   return (
     <group
