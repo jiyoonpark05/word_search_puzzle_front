@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "../../theme.css";
+import { url } from "inspector";
+import { vars } from "@app/theme.css";
 
 export const textArea = style({
   position: "absolute",
@@ -10,5 +11,5 @@ export const textArea = style({
 });
 
 export const textBubble = style({
-  backgroundImage: "./textbubble_default.png",
+  //   backgroundImage: 'url("../three/textbubble_default.png")',
 });
