@@ -11,5 +11,14 @@ export const textArea = style({
 });
 
 export const textBubble = style({
-  //   backgroundImage: 'url("../three/textbubble_default.png")',
+  display: "flex",
+  width: "100%",
+  height: 100,
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+export const defaultBubble = style({
+  maxHeight: "90%",
+  aspectRatio: "16/9",
 });
