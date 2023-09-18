@@ -1,8 +1,8 @@
 import { atom } from "recoil";
 
-export const bunnyState = atom({
+export const bunnyState = atom<any>({
   key: "bunnyState",
-  default: "",
+  default: "default",
 });
 
 export const UserNameState = atom<any>({
@@ -24,5 +24,10 @@ export const UserNameState = atom<any>({
 
 export const listeningState = atom<any>({
   key: "listeningState",
-  default: "Listen",
+  default: "default",
+});
+
+export const senarioState = atom<any>({
+  key: "senarioState",
+  default: "Intro",
 });

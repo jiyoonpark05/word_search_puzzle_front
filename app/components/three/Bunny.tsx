@@ -5,6 +5,8 @@ Command: npx gltfjsx@6.2.10 public/models/Bunny.gltf -o app/components/three/Bun
 
 import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
+import { bunnyState, senarioState } from "./BunnyStates";
+import { useRecoilState } from "recoil";
 
 type GLTFResult = {
   nodes: {
@@ -15,6 +17,9 @@ type GLTFResult = {
   };
 };
 export function Bunny(props: any) {
+  const [state, setState] = useRecoilState(bunnyState);
+  const [senario, setSenario] = useRecoilState(senarioState);
+
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
     "/models/Bunny.gltf"
@@ -24,29 +29,31 @@ export function Bunny(props: any) {
 
   useEffect(() => {
     // default movement
-    if (props.state == "default") {
+    if (state === "default") {
       actions["Idle"]?.reset().fadeIn(0.5).play();
       return () => actions["Idle"]?.fadeOut(0.5);
     }
     // say Hi when it clicked
-    if (props.state == "greeting") {
+    if (state === "greeting") {
       actions["Idle"]?.reset().fadeIn(0.5).stop();
       actions["Wave"]?.reset().fadeIn(0.5).play();
 
+      if (senario === "Intro") setSenario("Greeting");
+
       setTimeout(() => {
         actions["Wave"]?.reset().fadeOut(0.5).stop();
-        props.setState("default");
+        setState("default");
       }, 1500);
       return () => actions["Wave"]?.fadeOut(0.5);
     }
-  }, [props.state]);
+  }, [state]);
 
   return (
     <group
       ref={group}
       {...props}
       dispose={null}
-      onClick={(e) => props.setState("greeting")}
+      onClick={(e) => setState("greeting")}
     >
       <group name="Scene">
         <group name="CharacterArmature">

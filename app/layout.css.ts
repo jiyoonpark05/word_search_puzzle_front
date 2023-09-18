@@ -10,8 +10,4 @@ export const background = style({
 
 export const mainStlye = style({
   height: "100vh",
-  // display: "block",
-  // maxWidth: 560,
-  // marginLeft: "auto",
-  // marginRight: "auto",
 });
