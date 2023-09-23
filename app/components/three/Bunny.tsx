@@ -7,6 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { bunnyState, senarioState } from "./BunnyStates";
 import { useRecoilState } from "recoil";
+import { setSourceMapRange } from "typescript";
 
 type GLTFResult = {
   nodes: {
@@ -26,6 +27,7 @@ export function Bunny(props: any) {
   ) as GLTFResult;
 
   const { actions } = useAnimations(animations, group);
+  console.log(actions);
 
   useEffect(() => {
     // default movement
@@ -38,14 +40,26 @@ export function Bunny(props: any) {
       actions["Idle"]?.reset().fadeIn(0.5).stop();
       actions["Wave"]?.reset().fadeIn(0.5).play();
 
-      if (senario === "Intro") setSenario("Greeting");
+      if (senario === 0) setSenario(1);
 
       setTimeout(() => {
         actions["Wave"]?.reset().fadeOut(0.5).stop();
         setState("default");
       }, 1500);
+
       return () => actions["Wave"]?.fadeOut(0.5);
     }
+    // ask user Name
+    if (state === "askName") {
+      actions["Idle"]?.reset().fadeIn(0.5).stop();
+      actions["Weapon"]?.reset().fadeIn(0.5).play();
+    }
+    setTimeout(() => {
+      actions["Weapon"]?.reset().fadeOut(0.5).stop();
+      setState("default");
+    }, 800);
+
+    return () => actions["Weapon"]?.fadeOut(0.5);
   }, [state]);
 
   return (

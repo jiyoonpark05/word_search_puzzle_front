@@ -10,13 +10,13 @@ export const UserNameState = atom<any>({
   default: undefined,
   effects: [
     ({ setSelf, onSet }) => {
-      const savedData = localStorage.getItem("userName");
+      const savedData = localStorage.getItem("puzzleUserName");
       if (savedData) setSelf(JSON.parse(savedData));
 
       onSet((newValue, _, isReset) => {
         isReset
-          ? localStorage.removeItem("userName")
-          : localStorage.setItem("userName", JSON.stringify(newValue));
+          ? localStorage.removeItem("puzzleUserName")
+          : localStorage.setItem("puzzleUserName", JSON.stringify(newValue));
       });
     },
   ],
@@ -29,5 +29,5 @@ export const listeningState = atom<any>({
 
 export const senarioState = atom<any>({
   key: "senarioState",
-  default: "Intro",
+  default: 0,
 });
