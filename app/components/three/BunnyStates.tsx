@@ -6,17 +6,25 @@ export const bunnyState = atom<any>({
 });
 
 export const UserNameState = atom<any>({
-  key: "userNameStorageState",
-  default: undefined,
-  effects: [
-    ({ setSelf, onSet }) => {
+  key: "userNameState",
+  default: () => {
+    // Initialize the default value using localStorage
+    if (typeof window !== "undefined") {
       const savedData = localStorage.getItem("puzzleUserName");
-      if (savedData) setSelf(JSON.parse(savedData));
-
+      if (savedData) {
+        return JSON.parse(savedData);
+      }
+    }
+    return undefined;
+  },
+  effects_UNSTABLE: [
+    ({ onSet }) => {
       onSet((newValue, _, isReset) => {
-        isReset
-          ? localStorage.removeItem("puzzleUserName")
-          : localStorage.setItem("puzzleUserName", JSON.stringify(newValue));
+        if (typeof window !== "undefined") {
+          isReset
+            ? localStorage.removeItem("puzzleUserName")
+            : localStorage.setItem("puzzleUserName", JSON.stringify(newValue));
+        }
       });
     },
   ],
