@@ -1,6 +1,6 @@
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/three/textArea.css.ts.vanilla.css","source":"LnRleHRBcmVhX3RleHRBcmVhX19remM2am8wIHsKICBwb3NpdGlvbjogYWJzb2x1dGU7CiAgdG9wOiA3MCU7CiAgbGVmdDogMDsKICBoZWlnaHQ6IDMwJTsKICB3aWR0aDogMTAwJTsKfQoudGV4dEFyZWFfdGV4dEJ1YmJsZV9fa3pjNmpvMSB7CiAgd2lkdGg6IDEwMCU7CiAgaGVpZ2h0OiAxMDAlOwogIGRpc3BsYXk6IGZsZXg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKfQoudGV4dEFyZWFfZGVmYXVsdEJ1YmJsZV9fa3pjNmpvMiB7CiAgd2lkdGg6IDEwMCU7CiAgbWF4LXdpZHRoOiAxMDAwcHg7CiAgbWF4LWhlaWdodDogOTAlOwogIGFzcGVjdC1yYXRpbzogMTYvOTsKICBtYXJnaW46IDAgM3JlbTsKfQoudGV4dEFyZWFfdGV4dF9fa3pjNmpvMyB7CiAgcG9zaXRpb246IGFic29sdXRlOwp9Ci50ZXh0QXJlYV9pbnB1dEJ1YmJsZV9fa3pjNmpvNCB7CiAgZGlzcGxheTogZmxleDsKICBtYXgtd2lkdGg6IDEwMDBweDsKICBiYWNrZ3JvdW5kOiAjZmVmNmUwOwogIGJvcmRlci1yYWRpdXM6IDFyZW07CiAgcGFkZGluZzogMXJlbSAxcmVtOwogIG1hcmdpbjogMTJyZW0gYXV0bzsKfQoudGV4dEFyZWFfaW5wdXRfX2t6YzZqbzUgewogIHdpZHRoOiAxMDAlOwogIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OwogIGJvcmRlcjogMHB4Owp9Ci50ZXh0QXJlYV9zZW5kQnV0dG9uX19remM2am82IHsKICB3aWR0aDogNHJlbTsKICBoZWlnaHQ6IDJyZW07CiAgYm9yZGVyLXJhZGl1czogMC41cmVtOwogIGJhY2tncm91bmQ6ICM4MTM0M2Y7Cn0="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/three/textArea.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE41Ty5KbMBC871eoKuUjDg9jr8kp+xM5ugQasHZlSaVHxU4q/57hIYOBjXOhpBHV3dPTs3Vwdd8N0NP9cPr4Ve3fVUx+vxCileWOK1kQWlolvINvWHVKF+QQb9qzgNoVJG6PZ+DNGS9Z//KTM3cuSBK31z8v2weqN1+WAgJZ0pExbrWgt4LUAq4LhBE/3N+9dby+RZWSDiQ+VPgF0z5RwRsZcQcXO5anGsqO/4ehWoMJMtL/knGh12gsxbr7h1oNlYsMRbewvv96/KfCz6W4m4YTg5p64YKurJ8FZYzLBs3ekCTbkJgk6V1Q8OY4N3sF3YJArQF8twDvsUOzpuEyKpVz6lKQ1MBlTpkk65yBIO8InsxyYuqx93QK2CueTWv/LKFDC6ZnSrf5IH7gOQzXICU8l7T6aIzykuHchDIFMcAe9SjdUtqg5PBoYb4hC0vaQ/j99ZnwfLpaaT6D4lL72f4c14O7mtSxvYJ8qaHeQ7e8pTIMDAaYcY87kwxm3JtqC/dqnwostnkg1Du1IjGIo2vzn6pwhkqrqcHdGJVgEpcpkOzNYxBlgC6n0LvZPENWZ53F2+Wg0YnXJNtlNRL+BVFGkDUTBQAA"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .textArea_textArea__kzc6jo0 {
   position: absolute;
   top: 70%;
@@ -9,23 +9,50 @@
   width: 100%;
 }
 .textArea_textBubble__kzc6jo1 {
+  display: flex;
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
-.textArea_defaultBubble__kzc6jo2 {
+.textArea_bubbleWrapper__kzc6jo2 {
+  display: flex;
   width: 100%;
   max-width: 1000px;
-  max-height: 90%;
   aspect-ratio: 16/9;
-  margin: 0 3rem;
+  justify-content: center;
 }
-.textArea_text__kzc6jo3 {
+.textArea_bubbleWrapper_type_default__kzc6jo3 {
+  padding: 0% 13% 0 12%;
+  max-height: 90%;
+}
+.textArea_bubbleWrapper_type_select__kzc6jo4 {
+  padding: 0% 3% 0 10%;
+  margin-bottom: 2rem;
+  max-height: 110%;
+}
+.textArea_bubble__kzc6jo5 {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+}
+.textArea_selectWrapper__kzc6jo6 {
   position: absolute;
+  top: 10%;
+  right: 2.5rem;
+  width: 7rem;
+  height: 5rem;
+  background-color: red;
 }
-.textArea_inputBubble__kzc6jo4 {
+.textArea_options__kzc6jo7 {
+  padding: 5% 10%;
+}
+.textArea_text__kzc6jo8 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+.textArea_inputBubble__kzc6jo9 {
   display: flex;
   max-width: 1000px;
   background: #fef6e0;
@@ -33,12 +60,12 @@
   padding: 1rem 1rem;
   margin: 12rem auto;
 }
-.textArea_input__kzc6jo5 {
+.textArea_input__kzc6joa {
   width: 100%;
   background: transparent;
   border: 0px;
 }
-.textArea_sendButton__kzc6jo6 {
+.textArea_sendButton__kzc6job {
   width: 4rem;
   height: 2rem;
   border-radius: 0.5rem;

@@ -3,12 +3,16 @@ import {
   bunnyState,
   listeningState,
   senarioState,
+  studyLanguageState,
   UserNameState,
 } from "./BunnyStates";
 import Image from "next/image";
 import * as css from "./textArea.css";
 import defaultBubble from "@public/images/textbubble_default.png";
+import selectBubble from "@public/images/textbubble_selector.png";
+
 import { useEffect, useState } from "react";
+const languageList = ["ENGLISH", "GERMAN"];
 
 const TextArea = () => {
   const [state, setState] = useRecoilState(listeningState);
@@ -17,6 +21,7 @@ const TextArea = () => {
   const [userName, setUserName] = useRecoilState(UserNameState);
   const [text, setText] = useState("");
   const [userNameInput, setUserNameInput] = useState("");
+  const [language, setLanguage] = useRecoilState(studyLanguageState);
 
   useEffect(() => {
     switch (senario) {
@@ -50,6 +55,7 @@ const TextArea = () => {
         break;
       case 7:
         setState("Select");
+        setText(textArry.chooseType);
         break;
       default:
     }
@@ -91,11 +97,23 @@ const TextArea = () => {
             senario == 5 ? setSenario(senario + 2) : setSenario(senario + 1)
           }
         >
-          <Image className={css.defaultBubble} src={defaultBubble} alt="img" />
-          <span className={css.text}>{text}</span>
+          <div className={css.bubbleWrapper({ type: "default" })}>
+            <Image className={css.bubble} src={defaultBubble} alt="img" />
+            <span className={css.text}>{text}</span>
+          </div>
         </div>
       ) : state == "Select" ? (
-        <div>?</div>
+        <div className={css.textBubble}>
+          <div className={css.bubbleWrapper({ type: "select" })}>
+            <Image className={css.bubble} src={selectBubble} alt="img" />
+            <span className={css.text}>{text}</span>
+            <div className={css.selectWrapper}>
+              {languageList.map((lang) => {
+                return <div className={css.options}>{lang}</div>;
+              })}
+            </div>
+          </div>
+        </div>
       ) : null}
     </div>
   );

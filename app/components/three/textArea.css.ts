@@ -1,7 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { url } from "inspector";
-import { vars } from "@app/theme.css";
-import { transcode } from "buffer";
+import { recipe } from "@vanilla-extract/recipes";
 
 export const textArea = style({
   position: "absolute",
@@ -12,23 +10,59 @@ export const textArea = style({
 });
 
 export const textBubble = style({
+  display: "flex",
   width: "100%",
   height: "100%",
-  display: "flex",
   justifyContent: "center",
   alignItems: "center",
 });
 
-export const defaultBubble = style({
+export const bubbleWrapper = recipe({
+  base: {
+    display: "flex",
+    width: "100%",
+    maxWidth: "1000px",
+    aspectRatio: "16/9",
+    justifyContent: "center",
+  },
+  variants: {
+    type: {
+      default: {
+        padding: "0% 13% 0 12%",
+        maxHeight: "90%",
+      },
+      select: {
+        padding: "0% 3% 0 10%",
+        marginBottom: "2rem",
+        maxHeight: "110%",
+      },
+    },
+  },
+});
+
+export const bubble = style({
   width: "100%",
-  maxWidth: "1000px",
-  maxHeight: "90%",
-  aspectRatio: "16/9",
-  margin: "0 3rem",
+  height: "100%",
+  maxWidth: "900px",
+});
+
+export const selectWrapper = style({
+  position: "absolute",
+  top: "10%",
+  right: "2.5rem",
+  width: "7rem",
+  height: "5rem",
+  backgroundColor: "red",
+});
+
+export const options = style({
+  padding: "5% 10%",
 });
 
 export const text = style({
   position: "absolute",
+  top: "50%",
+  left: "25%",
 });
 
 export const inputBubble = style({

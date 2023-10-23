@@ -39,3 +39,8 @@ export const senarioState = atom<any>({
   key: "senarioState",
   default: 0,
 });
+
+export const studyLanguageState = atom<any>({
+  key: "languageState",
+  default: 0,
+});
