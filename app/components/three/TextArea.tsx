@@ -105,13 +105,20 @@ const TextArea = () => {
       ) : state == "Select" ? (
         <div className={css.textBubble}>
           <div className={css.bubbleWrapper({ type: "select" })}>
-            <Image className={css.bubble} src={selectBubble} alt="img" />
-            <span className={css.text}>{text}</span>
+            <Image className={css.bubble} src={defaultBubble} alt="img" />
             <div className={css.selectWrapper}>
               {languageList.map((lang) => {
                 return <div className={css.options}>{lang}</div>;
               })}
             </div>
+            <span className={css.text}>{text}</span>
+            {/* <Image className={css.bubble} src={selectBubble} alt="img" />
+            <span className={css.text}>{text}</span>
+            <div className={css.selectWrapper}>
+              {languageList.map((lang) => {
+                return <div className={css.options}>{lang}</div>;
+              })}
+            </div> */}
           </div>
         </div>
       ) : null}

@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
+// #FEE8B4 bubble color
 
 export const textArea = style({
   position: "absolute",
@@ -32,9 +33,11 @@ export const bubbleWrapper = recipe({
         maxHeight: "90%",
       },
       select: {
-        padding: "0% 3% 0 10%",
-        marginBottom: "2rem",
-        maxHeight: "110%",
+        padding: "0% 13% 0 12%",
+        maxHeight: "90%",
+        // padding: "0% 3% 0 10%",
+        // marginBottom: "2rem",
+        // maxHeight: "110%",
       },
     },
   },
@@ -78,6 +81,7 @@ export const input = style({
   width: "100%",
   background: "transparent",
   border: "0px",
+  outline: "none",
 });
 
 export const sendButton = style({
