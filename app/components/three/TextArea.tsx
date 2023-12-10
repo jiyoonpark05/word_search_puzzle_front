@@ -5,13 +5,16 @@ import {
   senarioState,
   studyLanguageState,
   UserNameState,
-} from "./BunnyStates";
+} from "../../recoil/atoms";
 import Image from "next/image";
 import * as css from "./textArea.css";
 import defaultBubble from "@public/images/textbubble_default.png";
 import selectBubble from "@public/images/textbubble_selector.png";
+import { modalState } from "../../recoil/atoms";
 
 import { useEffect, useState } from "react";
+import Modal from "../modal";
+import GameSetting from "../modalContents/gameSetting";
 const languageList = ["ENGLISH", "GERMAN"];
 
 const TextArea = () => {
@@ -22,6 +25,7 @@ const TextArea = () => {
   const [text, setText] = useState("");
   const [userNameInput, setUserNameInput] = useState("");
   const [language, setLanguage] = useRecoilState(studyLanguageState);
+  const [isOpen, setIsOpen] = useRecoilState(modalState);
 
   useEffect(() => {
     switch (senario) {
@@ -69,6 +73,7 @@ const TextArea = () => {
     chooseType: "awesome, what do you want for today?",
   };
 
+  // handle User name with local storage.
   const handleSubmitName = () => {
     if (userNameInput == "") {
       return;
@@ -78,51 +83,64 @@ const TextArea = () => {
     setSenario(senario + 1);
   };
 
+  // select language for puzzle
+  const handleSelectLanguage = (lang: String) => {
+    setLanguage(lang);
+    setIsOpen(true); // show game setting modal
+  };
+
+  const closeModal = () => setIsOpen(false);
+
   return (
-    <div className={css.textArea}>
-      {state == "Speak" ? (
-        <div className={css.inputBubble}>
-          <input
-            type="text"
-            className={css.input}
-            value={userNameInput}
-            onChange={(e) => setUserNameInput(e.target.value)}
-          />
-          <div className={css.sendButton} onClick={handleSubmitName}></div>
-        </div>
-      ) : state == "Listen" ? (
-        <div
-          className={css.textBubble}
-          onClick={(e) =>
-            senario == 5 ? setSenario(senario + 2) : setSenario(senario + 1)
-          }
-        >
-          <div className={css.bubbleWrapper({ type: "default" })}>
-            <Image className={css.bubble} src={defaultBubble} alt="img" />
-            <span className={css.text}>{text}</span>
+    <>
+      <Modal onClose={closeModal}>
+        <GameSetting />
+      </Modal>
+      <div className={css.textArea}>
+        {state == "Speak" ? (
+          <div className={css.inputBubble}>
+            <input
+              type="text"
+              className={css.input}
+              value={userNameInput}
+              onChange={(e) => setUserNameInput(e.target.value)}
+            />
+            <div className={css.sendButton} onClick={handleSubmitName}></div>
           </div>
-        </div>
-      ) : state == "Select" ? (
-        <div className={css.textBubble}>
-          <div className={css.bubbleWrapper({ type: "select" })}>
-            <Image className={css.bubble} src={defaultBubble} alt="img" />
-            <div className={css.selectWrapper}>
-              {languageList.map((lang) => {
-                return <div className={css.options}>{lang}</div>;
-              })}
+        ) : state == "Listen" ? (
+          <div
+            className={css.textBubble}
+            onClick={(e) =>
+              senario == 5 ? setSenario(senario + 2) : setSenario(senario + 1)
+            }
+          >
+            <div className={css.bubbleWrapper({ type: "default" })}>
+              <Image className={css.bubble} src={defaultBubble} alt="img" />
+              <span className={css.text}>{text}</span>
             </div>
-            <span className={css.text}>{text}</span>
-            {/* <Image className={css.bubble} src={selectBubble} alt="img" />
-            <span className={css.text}>{text}</span>
-            <div className={css.selectWrapper}>
-              {languageList.map((lang) => {
-                return <div className={css.options}>{lang}</div>;
-              })}
-            </div> */}
           </div>
-        </div>
-      ) : null}
-    </div>
+        ) : state == "Select" ? (
+          <div className={css.textBubble}>
+            <div className={css.bubbleWrapper({ type: "select" })}>
+              <Image className={css.bubble} src={defaultBubble} alt="img" />
+              <div className={css.selectWrapper}>
+                {languageList.map((lang) => {
+                  return (
+                    <div
+                      className={css.options}
+                      onClick={(e) => handleSelectLanguage(lang)}
+                    >
+                      {lang}
+                    </div>
+                  );
+                })}
+              </div>
+              <span className={css.text}>{text}</span>
+            </div>
+          </div>
+        ) : null}
+      </div>
+    </>
   );
 };
 

@@ -1,6 +1,5 @@
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
-// #FEE8B4 bubble color
 
 export const textArea = style({
   position: "absolute",
@@ -21,6 +20,7 @@ export const textBubble = style({
 export const bubbleWrapper = recipe({
   base: {
     display: "flex",
+    position: "absolute",
     width: "100%",
     maxWidth: "1000px",
     aspectRatio: "16/9",
@@ -29,15 +29,10 @@ export const bubbleWrapper = recipe({
   variants: {
     type: {
       default: {
-        padding: "0% 13% 0 12%",
         maxHeight: "90%",
       },
       select: {
-        padding: "0% 13% 0 12%",
         maxHeight: "90%",
-        // padding: "0% 3% 0 10%",
-        // marginBottom: "2rem",
-        // maxHeight: "110%",
       },
     },
   },
@@ -51,15 +46,23 @@ export const bubble = style({
 
 export const selectWrapper = style({
   position: "absolute",
-  top: "10%",
-  right: "2.5rem",
+  right: "3%",
   width: "7rem",
-  height: "5rem",
-  backgroundColor: "red",
+  padding: "8px 12px",
+  borderRadius: "20px",
+  backgroundColor: "#FEE8B4",
 });
 
 export const options = style({
-  padding: "5% 10%",
+  padding: "4% 8%",
+  textAlign: "center",
+  ":hover": {
+    cursor: "pointer",
+    background: "#81353F",
+    opacity: "70%",
+    color: "white",
+    borderRadius: "0.5rem",
+  },
 });
 
 export const text = style({

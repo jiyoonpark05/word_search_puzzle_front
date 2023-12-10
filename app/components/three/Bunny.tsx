@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.2.10 public/models/Bunny.gltf -o app/components/three/Bun
 
 import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import { bunnyState, senarioState } from "./BunnyStates";
+import { bunnyState, senarioState } from "../../recoil/atoms";
 import { useRecoilState } from "recoil";
 import { setSourceMapRange } from "typescript";
 

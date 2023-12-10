@@ -12,7 +12,7 @@ import { Suspense, useState } from "react";
 import { RecoilRoot, useRecoilState } from "recoil";
 import { Background } from "./Background";
 import { Bunny } from "./Bunny";
-import { bunnyState } from "./BunnyStates";
+import { bunnyState, modalState } from "../../recoil/atoms";
 import TextArea from "./TextArea";
 
 const ThreeCanvas = () => {
