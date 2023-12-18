@@ -24,7 +24,7 @@ const ThreeCanvas = () => {
           position: [-5, 0, -3],
           fov: 45,
         }}
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: "100%", height: "100%" }}
       >
         <Suspense fallback={null}>
           <ambientLight intensity={1} />

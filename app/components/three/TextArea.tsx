@@ -93,7 +93,7 @@ const TextArea = () => {
 
   return (
     <>
-      <Modal onClose={closeModal}>
+      <Modal onClose={closeModal} modalSize="large">
         <GameSetting />
       </Modal>
       <div className={css.textArea}>
