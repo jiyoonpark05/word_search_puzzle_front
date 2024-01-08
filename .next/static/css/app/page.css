@@ -78,41 +78,71 @@
   border-radius: 0.5rem;
   background: #81343f;
 }
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modal.css.ts.vanilla.css","source":"Lm1vZGFsX21vZGFsV3JhcHBlcl9famRjaDNlMCB7CiAgcG9zaXRpb246IGFic29sdXRlOwogIHdpZHRoOiAxMDAlOwogIGRpc3BsYXk6IGZsZXg7CiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgei1pbmRleDogMTsKICB0b3A6IDUlOwp9Ci5tb2RhbF9tb2RhbENvbnRhaW5lcl9famRjaDNlMSB7CiAgd2lkdGg6IDg5JTsKICBwYWRkaW5nOiA4cHggMTZweDsKICBiYWNrZ3JvdW5kOiAjRjhGNUU1Owp9Ci5tb2RhbF9jbG9zZUhlYWRlcl9famRjaDNlNSB7CiAgZGlzcGxheTogZmxleDsKICBqdXN0aWZ5LWNvbnRlbnQ6IHJpZ2h0Owp9Ci5tb2RhbF9nYW1lT3B0aW9uX19qZGNoM2U3IHsKICBkaXNwbGF5OiBmbGV4Owp9Ci5tb2RhbF9nYW1lT3B0aW9uVGl0bGVfX2pkY2gzZTggewogIGZvbnQtc2l6ZTogMS41cmVtOwogIHBhZGRpbmctcmlnaHQ6IDJyZW07Cn0KLm1vZGFsX2dhbWVPcHRpb25TZXR0aW5nX19qZGNoM2U5IHsKICBkaXNwbGF5OiBmbGV4OwogIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgY29sdW1uLWdhcDogMXJlbTsKfQoubW9kYWxfZ2FtZU9wdGlvblZhbHVlX19qZGNoM2VhIHsKICBmb250LXNpemU6IDEuNXJlbTsKfQ=="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modal.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE62TQU/CMBTH73yKJobjyCYUxjgSiJ48aPRIuvUxil3bdF1Ajd/dtnOw4YwxmiXd2vW9/+/1/zoqJCV848cnTZQCvdnsabYbQ4jeBggpWTLDpEgQSUvJKwMLu3pg1OwSFIXh0E0pKxUnLwnacji6hX1VGrZ9CTIpDAiToMyOoN2v14AJCkcb7GZGqgThOksqNQUdaEJZVSYoVjbV+2DUIlzadISJM2NUMxJKmch9CIqmyiOkJHvOtawETdDVOl7jFXbLBdE5E0EqjZGFhdBQtFQyLku4AULPEthL/FyhZvnOXAqn3E4WbcRohIco7Cn3emLhQ/u4jxZSTgq4B2NsdIM07UcqbF2NMbGvC6HMWlaIICfKuTXsotg9KBzh7hE4vTvlLG/kZn1yPfsvKON+SsJZLgJmoCjbbdEB/Ur0mfuBGQ6NwLxfwL0DyjRkdd/Wmd0fLQ9tAS8qtW2POJ6R6cwHWzuDkr2Cd+pbjkfCK7i4L+TfcKYTjMfRb3EajrSfo33Ajel/lby1LjaymZft3LoVXsbzSafnauVTxRd34NSMH56fDviXBAAA"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .modal_modalWrapper__jdch3e0 {
   position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
   z-index: 1;
-  top: 5%;
+  top: 50%;
+  border-radius: 8px;
 }
 .modal_modalContainer__jdch3e1 {
-  width: 89%;
   padding: 8px 16px;
   background: #F8F5E5;
+  margin-bottom: 1rem;
 }
 .modal_closeHeader__jdch3e5 {
   display: flex;
   justify-content: right;
+  background: black;
+  padding: 1.5% 0;
+  border-radius: 24px 0 0 24px;
+}
+.modal_gameSetting__jdch3e6 {
+  display: flex;
+  min-width: 18rem;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
+  padding: 1rem 0.5rem;
 }
 .modal_gameOption__jdch3e7 {
   display: flex;
 }
-.modal_gameOptionTitle__jdch3e8 {
-  font-size: 1.5rem;
-  padding-right: 2rem;
-}
-.modal_gameOptionSetting__jdch3e9 {
+.modal_gameOptionSetting__jdch3e8 {
   display: flex;
   align-items: center;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
-.modal_gameOptionValue__jdch3ea {
+.modal_gameSettingTitle__jdch3e9 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  color: #887a67;
   font-size: 1.5rem;
+}
+.modal_gameSettingValueWrapper__jdch3ea {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  color: #645531;
+  font-size: 1.5rem;
+}
+.modal_gameSettingValue__jdch3eb {
+  display: flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  color: #645531;
+  font-size: 1.5rem;
+}
+.modal_gameSettingValueItem__jdch3ec {
+  background: #E5C894;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/page.css.ts.vanilla.css","source":"LnBhZ2Vfd3JhcHBlcl9fbGxjNG4wMCB7CiAgaGVpZ2h0OiAxMDAlOwp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!

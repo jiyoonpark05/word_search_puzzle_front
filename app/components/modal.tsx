@@ -19,9 +19,11 @@ const Modal = ({
   return (
     <div className={css.modalWrapper}>
       <div className={css.modalContainer({ size: modalSize })}>
-        <div className={css.closeHeader}>x</div>
+        <div className={css.closeHeader} onClick={onClose}>
+          x
+        </div>
         {children}
-        <div>button</div>
+        <div>Let's go !</div>
       </div>
     </div>
   );
