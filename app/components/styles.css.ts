@@ -7,3 +7,5 @@ export const headerStyle = style({
 });
 
 export const buttonStyle = style({});
+
+export const chipStyle = style({});

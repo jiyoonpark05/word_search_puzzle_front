@@ -134,7 +134,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("b16aafb56edefccf")
+/******/ 		__webpack_require__.h = () => ("f38b18cd6b6b1158")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
@@ -179,6 +179,11 @@
 /******/ 		__webpack_require__.p = "/_next/";
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/require chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
@@ -208,7 +213,7 @@
 /******/ 		__webpack_require__.f.require = (chunkId, promises) => {
 /******/ 			// "1" is the signal for "already loaded"
 /******/ 			if(!installedChunks[chunkId]) {
-/******/ 				if("app/page" == chunkId) {
+/******/ 				if("app/(routes)/puzzle/page" == chunkId) {
 /******/ 					installChunk(require("./" + __webpack_require__.u(chunkId)));
 /******/ 				} else installedChunks[chunkId] = 1;
 /******/ 			}

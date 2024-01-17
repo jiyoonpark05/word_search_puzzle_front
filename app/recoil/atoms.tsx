@@ -49,3 +49,8 @@ export const modalState = atom({
   key: "modalState",
   default: false,
 });
+
+export const gameSettingState = atom({
+  key: "gameSettingState",
+  default: { level: "", cnt: "", diff: "" },
+});

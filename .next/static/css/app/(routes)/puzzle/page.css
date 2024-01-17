@@ -1,0 +1,48 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/(routes)/puzzle/page.css.ts.vanilla.css","source":"LnBhZ2VfcGxheVdyYXBwZXJfXzFjOHVobHUwIHsKICB3aWR0aDogMTAwJTsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiByb3c7Cn0KQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzAwcHgpIHsKICAucGFnZV9wbGF5V3JhcHBlcl9fMWM4dWhsdTAgewogICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsKICB9Cn0="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_playWrapper__1c8uhlu0 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 700px) {
+  .page_playWrapper__1c8uhlu0 {
+    flex-direction: column;
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/puzzle/puzzle.css.ts.vanilla.css","source":"LnB1enpsZV9ib2FyZENvbnRhaW5lcl9fMzFmOWltMCB7CiAgcG9zaXRpb246IHJlbGF0aXZlOwogIHdpZHRoOiAxMDAlOwogIGhlaWdodDogMTAwJTsKfQoucHV6emxlX2dyaWRfXzMxZjlpbTEgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB6LWluZGV4OiAxMDsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDEwMCU7CiAgZGlzcGxheTogZ3JpZDsKICByb3ctZ2FwOiAwOwogIGNvbHVtbi1nYXA6IDA7CiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiByZXBlYXQoMTAsMWZyKTsKICBncmlkLXRlbXBsYXRlLXJvd3M6IHJlcGVhdCgxMCwxZnIpOwogIGN1cnNvcjogcG9pbnRlcjsKfQoucHV6emxlX3dvcmRUaXRsZV9fMzFmOWltMiB7CiAgdXNlci1zZWxlY3Q6IG5vbmU7CiAgZGlzcGxheTogZmxleDsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICBhbGlnbi1pdGVtczogY2VudGVyOwogIGZvbnQtc2l6ZTogMnJlbTsKICBhc3BlY3QtcmF0aW86IDFweDsKICBmb250LXdlaWdodDogNjAwOwp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.puzzle_boardContainer__31f9im0 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.puzzle_grid__31f9im1 {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-row-gap: 0;
+  row-gap: 0;
+  grid-column-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(10,1fr);
+  cursor: pointer;
+}
+.puzzle_wordTitle__31f9im2 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  aspect-ratio: 1px;
+  font-weight: 600;
+}
