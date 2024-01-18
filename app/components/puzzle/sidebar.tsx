@@ -12,6 +12,7 @@ const Sidebar = ({ ...props }: BoardProps) => {
   return (
     <div className={css.container}>
       <div className={css.timmerWrapper}>timmer</div>
+      <div className={css.wordListTitle}>wordListHeader</div>
       <div className={css.wordListWrapper}>{wordList}</div>
     </div>
   );

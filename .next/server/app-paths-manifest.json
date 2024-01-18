@@ -1,3 +1,4 @@
 {
+  "/page": "app/page.js",
   "/(routes)/puzzle/page": "app/(routes)/puzzle/page.js"
 }

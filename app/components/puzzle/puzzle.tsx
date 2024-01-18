@@ -84,7 +84,8 @@ const Container = styled.div`
   flex-basis: 70%;
   max-width: calc(100vw - 50%);
   width: 100%;
-  height: 100%;
+  /* max-height: calc(100% - 40px); */
+  background-color: white;
 `;
 
 const Grid = styled.div<{ column: number; row: number }>`

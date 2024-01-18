@@ -1,0 +1,230 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/theme.css.ts.vanilla.css","source":"LnRoZW1lX3RoZW1lQ2xhc3NfX3Z6aTQxMDAgewogIC0tY29sb3JzLWJsYWNrX192emk0MTAxOiAjMDAwMDAwOwogIC0tY29sb3JzLXdoaXRlX192emk0MTAyOiAjRkZGRkZGOwogIC0tY29sb3JzLXdoaXRlSW5wdXRfX3Z6aTQxMDM6ICNGOEY1RTU7CiAgLS1jb2xvcnMtcHJpbWFyeV9fdnppNDEwNDogIzc3RDVDMjsKICAtLWNvbG9ycy15ZWxsb3dfX3Z6aTQxMDU6ICNGRkVkNEM7CiAgLS1jb2xvcnMteWVsbG93QmFja2dyb3VuZF9fdnppNDEwNjogI0ZFRThCNDsKICAtLWNvbG9ycy1saWdodEJyb3duX192emk0MTA3OiAjRTVDODk0OwogIC0tY29sb3JzLWJyb3duX192emk0MTA4OiAjODEzNTNGOwogIC0tY29sb3JzLXRleHRIMV9fdnppNDEwOTogIzY0NTUzMTsKICAtLWNvbG9ycy10ZXh0SDJfX3Z6aTQxMGE6ICM4ODdBNjc7Cn0="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.theme_themeClass__vzi4100 {
+  --colors-black__vzi4101: #000000;
+  --colors-white__vzi4102: #FFFFFF;
+  --colors-whiteInput__vzi4103: #F8F5E5;
+  --colors-primary__vzi4104: #77D5C2;
+  --colors-yellow__vzi4105: #FFEd4C;
+  --colors-yellowBackground__vzi4106: #FEE8B4;
+  --colors-lightBrown__vzi4107: #E5C894;
+  --colors-brown__vzi4108: #81353F;
+  --colors-textH1__vzi4109: #645531;
+  --colors-textH2__vzi410a: #887A67;
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/three/textArea.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE5WUzXLjIAzH730KLp3ZHJy1nW/31Nz2CfaYwbbi0BJg+Eji7vTdF3BIXJckuxcPCCP99JfEWMNJv0rAm8ti8/5Rzd94iv48ISS4IppwViBcKk6Nhhdr1VwUaJE+uzWFrS5Q6pY7IM3ObibdyZHUelegLHXbz6fxl1BrU5YUQrDMB6uJEhS3BdpSOH3zcPUf9m9GabJtk4ozDcweVPYL0h1hShqWEA17dTX3GUof/7fEQoAMGHkcIy7CAG6PT8nVlAp/EysBlU4kttetff5zdZf7NqBuBWxq2GJDdaCdeFoXNwizGiodcaKAWqTgY/qvPsKFmb/woDA9LVadFH2HHcFA+vmddpPntup31ULC3tcG1zVhTYGW4oSyvJO95LIGaWWvibH1z8/VKHH13khuWG2lp1wW6IDlj6TbqKQFSvlxfflpszl8kGmWzkdf+blwiCqQLzrywDF9RksP6v5PfB/GCzx0U+z4AaR3VhmpHJ7gJDT0lX1AXUp+ZAF1OXL/coErotvLiMaSPe7scIRr+SiiWjqeeY2HkxuAl48eiFn/gchng7YiTJjBK7CKj190sm7q4RP75ZyH7Cax7LJh/zjDxbrHsiE2pyx3Vmw0j8AHbBwbiT6flpgpgaVtgiuJFbjLhBtNCYMCMc5gOCmsXhutOQuxyn6s6Zk2jF9+3t8o5P800QOKe736+RekF0UIVAYAAA=="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.textArea_textArea__kzc6jo0 {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  height: 30%;
+  width: 100%;
+}
+.textArea_textBubble__kzc6jo1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.textArea_bubbleWrapper__kzc6jo2 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16/9;
+  justify-content: center;
+}
+.textArea_bubbleWrapper_type_default__kzc6jo3 {
+  max-height: 90%;
+}
+.textArea_bubbleWrapper_type_select__kzc6jo4 {
+  max-height: 90%;
+}
+.textArea_bubble__kzc6jo5 {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+}
+.textArea_selectWrapper__kzc6jo6 {
+  position: absolute;
+  right: 3%;
+  width: 7rem;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: var(--colors-yellowBackground__vzi4106);
+}
+.textArea_options__kzc6jo7 {
+  padding: 4% 8%;
+  text-align: center;
+}
+.textArea_options__kzc6jo7:hover {
+  cursor: pointer;
+  background: var(--colors-brown__vzi4108);
+  opacity: 70%;
+  color: var(--colors-white__vzi4102);
+  border-radius: 0.5rem;
+}
+.textArea_text__kzc6jo8 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
+.textArea_inputBubble__kzc6jo9 {
+  display: flex;
+  max-width: 1000px;
+  background: var(--colors-whiteInput__vzi4103);
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  margin: 12rem auto;
+}
+.textArea_input__kzc6joa {
+  width: 100%;
+  background: transparent;
+  border: 0px;
+  outline: none;
+}
+.textArea_sendButton__kzc6job {
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: var(--colors-brown__vzi4108);
+}
+.textArea_sendButton__kzc6job:hover {
+  cursor: pointer;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modal.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE6VVTXObMBC951fokpnkgAfIl0MubXpJLu0hnfboEWgBJUJiJBE76eS/VwILg1H80Y5nMBLafW/f7mpnlSCYLdrnPc5eCikaThaLZ5KVFxCiPycI1UJRTQVPEE6VYI2GO7P7HlBOYJWgyK6WlOjSvIfhqV2WQItSb9Za1AkK7VvagwSZYEIm6BXLs6BbqCBl5vti8fpOL6MwOrcWosYZ1W8JurK+Pk5mA8q/Ja5rkI5vtIPvFkNCVc2w8ZozWNmN50Zpmr8ZIlwDN9wz8wQ5CjXuY7mccvlmDDHlGzZxxwYTQnlhkCVUKB49xoJsSbEsqYZHXjfa6XHR6pEKSUAGEhPaKKPq7Kr11JPJmFDwAJhsmFy3TPaHLG3W7kakZ1en68SNYePLeoVC87MvQ3QplHo0Hh32TYvt1F+THVRIv5M1Utl6qAXthB/L+x1X4HzOW5+++tGw0g+RE+y2FSw34QWKvkPSi95uLdcUUsHIAC1ttBb8qwTs4G798tn/gFAJWVdtUiwDCa8gFUzcmeLIaeUc4qEmOdUuAyPpw1lspWnrZkfeR/FFs2lZ+fvMkOVOpnkrk+9YW4PuWHy+L6ykFCb8LjmfZrMwiXwCrU2QzjD1C1xRHrjCmbsqMQ1d8aDAte3l07tJh036weL9qG2KHFzmg/Oc32JJ/CwxowUPjE6VGl4aI6JTRmvfP6lmfVnDYXXWebZfbMV1AJsuOr4pIp9ia36/MGtg65bN/52mr2L3gDvUwo86lDncr0LsVMBHq/BoMuzIlOOrvQPe16mHed7VQ3vb+g0YE8vhIO+ivT5ocnh5UfUEzOQUyELLTTpoy/C/6IhGMzMvd99MiAhtsJEuafZyBNccM9WTfT6ELLPT4H6IftNeeF8qIBQjlUkAjjAn6KzCK3cxXYdhvTpv/e+eVt5iQ+hjY/j5pBjbTi13XyifTAi/vafnjreftopnroUDDT7+AuEktw+ICgAA"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.modal_modalBackground__jdch3e0 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--colors-black__vzi4101);
+  opacity: 50%;
+}
+.modal_modalWrapper__jdch3e1 {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  top: 40%;
+}
+.modal_modalContainer__jdch3e2 {
+  padding: 1rem 2rem 2rem 2rem;
+  background: var(--colors-whiteInput__vzi4103);
+  border-radius: 0.5rem;
+}
+.modal_closeHeader__jdch3e6 {
+  display: flex;
+  justify-content: right;
+  padding: 1.5% 0;
+  border-radius: 24px 0 0 24px;
+}
+.modal_crossIcon__jdch3e7 {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.modal_modalName__jdch3e8 {
+  color: var(--colors-textH1__vzi4109);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.modal_buttonArea__jdch3e9 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.modal_buttonConfim__jdch3ea {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  background-color: var(--colors-brown__vzi4108);
+  color: var(--colors-white__vzi4102);
+}
+.modal_buttonConfim__jdch3ea:hover {
+  cursor: pointer;
+}
+.modal_gameSetting__jdch3eb {
+  display: flex;
+  min-width: 18rem;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
+  padding: 1rem 0.5rem;
+}
+.modal_gameOption__jdch3ec {
+  display: flex;
+}
+.modal_gameOptionSetting__jdch3ed {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.modal_gameSettingTitle__jdch3ee {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  color: var(--colors-textH1__vzi4109);
+  font-size: 1.5rem;
+}
+.modal_gameSettingValueWrapper__jdch3ef {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-size: 1.5rem;
+}
+.modal_gameSettingValue__jdch3eg {
+  display: flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  color: var(--colors-textH2__vzi410a);
+  font-size: 1.5rem;
+}
+.modal_gameSettingValueItem__jdch3eh {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.modal_gameSettingValueItem__jdch3eh:hover {
+  cursor: pointer;
+  background-color: var(--colors-yellowBackground__vzi4106);
+  border-radius: 0.5rem;
+}
+.modal_gameSettingValueItem_isSelected_true__jdch3ei {
+  background-color: var(--colors-yellowBackground__vzi4106);
+  outline: var(--colors-brown__vzi4108) dotted thick;
+}
+.modal_gameSettingValueItem_isSelected_false__jdch3ej {
+  background-color: var(--colors-lightBrown__vzi4107);
+}
+@media screen and (max-width: 600px) {
+  .modal_modalName__jdch3e8 {
+    font-size: 1.5rem;
+  }
+  .modal_buttonConfim__jdch3ea {
+    font-size: 1rem;
+  }
+  .modal_gameSettingTitle__jdch3ee {
+    font-size: 1.2rem;
+  }
+  .modal_gameSettingValue__jdch3eg {
+    font-size: 1.2rem;
+  }
+  .modal_gameSettingValueItem__jdch3eh {
+    padding: 0.25rem 0.5rem;
+  }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/page.css.ts.vanilla.css","source":"LnBhZ2Vfd3JhcHBlcl9fbGxjNG4wMCB7CiAgaGVpZ2h0OiAxMDAlOwp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_wrapper__llc4n00 {
+  height: 100%;
+}
