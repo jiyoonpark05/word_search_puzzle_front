@@ -15,7 +15,7 @@ const Highlight = ({ ...props }: highlightType) => {
   }
 
   const getAngle = (x1: number, y1: number, x2: number, y2: number) => {
-    const angle = (Math.atan2(y2 - y1, x2 - x1) * 100) / Math.PI;
+    const angle = (Math.atan2(y2 - y1, x2 - x1) * 180) / Math.PI;
     return angle;
   };
 
@@ -24,13 +24,15 @@ const Highlight = ({ ...props }: highlightType) => {
     x: number | undefined,
     y: number | undefined
   ) => {
+    console.log("get element--------");
+    console.log(x, y, root);
     if (x === null || y === null) {
       return null;
     }
     const element = root.getElementsByClassName(
       `${x}-${y}`
     )[0] as HTMLDivElement;
-
+    console.log(element);
     return element;
   };
 

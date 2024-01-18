@@ -22,7 +22,6 @@ type WordBoardCallback = {
 
 const useBoard = (wordSearch: puzzleModel, callbacks: WordBoardCallback) => {
   const initData = useMemo(() => {
-    console.log(wordSearch);
     return parseData(wordSearch);
   }, [wordSearch]);
 
@@ -85,7 +84,6 @@ const useBoard = (wordSearch: puzzleModel, callbacks: WordBoardCallback) => {
   const handleStart = (coord: Coordinate) => {
     if (!start) {
       setStart({ ...coord });
-      console.log(start);
     }
   };
 
@@ -114,8 +112,6 @@ const useBoard = (wordSearch: puzzleModel, callbacks: WordBoardCallback) => {
     // if there are starting point and endpoint
     if (startPoint && endPoint) {
       // startpoint and end point isn't same but have same direction
-      console.log("sartPoint and endPoint");
-      console.log(startPoint, endPoint);
       if (
         (startPoint.x !== endPoint.x || startPoint.y !== endPoint.y) &&
         isValidDirection(startPoint, endPoint)

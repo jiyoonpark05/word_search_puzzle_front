@@ -1,10 +1,9 @@
 "use client";
 import * as css from "./page.css";
 import Puzzle from "../../components/puzzle/puzzle";
-import Sidebar from "../../components/puzzle/Sidebar";
-import usePuzzle from "../../components/puzzle/usePlayPuzzle.hook";
 import { puzzleModel } from "@/app/components/puzzle/puzzle.types";
 import useBoard from "@/app/components/puzzle/useBoard.hook";
+import Sidebar from "@/app/components/puzzle/sidebar";
 
 interface PuzzleProps {
   puzzle: puzzleModel;
@@ -28,6 +27,27 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
           { x: 1, y: 3 },
         ],
       },
+      {
+        word: "WORLD",
+        path: [
+          { x: 4, y: 0 },
+          { x: 5, y: 0 },
+          { x: 6, y: 0 },
+          { x: 7, y: 0 },
+        ],
+      },
+      {
+        word: "PROGRAM",
+        path: [
+          { x: 2, y: 7 },
+          { x: 3, y: 7 },
+          { x: 4, y: 7 },
+          { x: 5, y: 7 },
+          { x: 6, y: 7 },
+          { x: 7, y: 7 },
+          { x: 8, y: 7 },
+        ],
+      },
     ],
     puzzle: [
       ["P", "D", "G", "H", "W", "O", "R", "L", "D", "G"],
@@ -46,8 +66,8 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
   const boardProps = useBoard(puzzleModel, {});
   return (
     <div className={css.playWrapper}>
-      <Puzzle {...boardProps} disable />
-      <Sidebar />
+      <Puzzle {...boardProps} />
+      <Sidebar {...boardProps} />
     </div>
   );
 }

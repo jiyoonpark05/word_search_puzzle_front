@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
+import { vars } from "../theme.css";
 
 export const modalBackground = style({
   position: "absolute",
@@ -7,7 +8,7 @@ export const modalBackground = style({
   width: "100%",
   height: "100%",
   top: 0,
-  backgroundColor: "black",
+  backgroundColor: vars.colors.black,
   opacity: "50%",
 });
 
@@ -23,7 +24,7 @@ export const modalWrapper = style({
 export const modalContainer = recipe({
   base: {
     padding: "1rem 2rem 2rem 2rem",
-    background: "#F8F5E5",
+    background: vars.colors.whiteInput,
     borderRadius: "0.5rem",
   },
   variants: {
@@ -49,7 +50,7 @@ export const crossIcon = style({
 });
 
 export const modalName = style({
-  color: "#6e685b",
+  color: vars.colors.textH1,
   fontSize: "2rem",
   fontWeight: "bold",
 
@@ -70,8 +71,8 @@ export const buttonConfim = style({
   padding: "0.25rem 1rem",
   borderRadius: "0.5rem",
   fontSize: "1.2rem",
-  backgroundColor: "#80373F",
-  color: "white",
+  backgroundColor: vars.colors.brown,
+  color: vars.colors.white,
 
   ":hover": {
     cursor: "pointer",
@@ -105,7 +106,7 @@ export const gameSettingTitle = style({
   display: "flex",
   flexDirection: "column",
   rowGap: "1.5rem",
-  color: "#887a67",
+  color: vars.colors.textH1,
   fontSize: "1.5rem",
   "@media": {
     "screen and (max-width: 600px)": {
@@ -118,14 +119,13 @@ export const gameSettingValueWrapper = style({
   display: "flex",
   flexDirection: "column",
   rowGap: "1rem",
-  color: "#645531",
   fontSize: "1.5rem",
 });
 
 export const gameSettingValue = style({
   display: "flex",
   columnGap: "0.5rem",
-  color: "#645531",
+  color: vars.colors.textH2,
   fontSize: "1.5rem",
 
   "@media": {
@@ -142,7 +142,7 @@ export const gameSettingValueItem = recipe({
 
     ":hover": {
       cursor: "pointer",
-      backgroundColor: "#FEE8B4",
+      backgroundColor: vars.colors.yellowBackground,
       borderRadius: "0.5rem",
     },
 
@@ -154,8 +154,11 @@ export const gameSettingValueItem = recipe({
   },
   variants: {
     isSelected: {
-      true: { backgroundColor: "#FEE8B4", outline: "#7F3840 dotted thick" },
-      false: { backgroundColor: "#E5C894" },
+      true: {
+        backgroundColor: vars.colors.yellowBackground,
+        outline: `${vars.colors.brown} dotted thick`,
+      },
+      false: { backgroundColor: vars.colors.lightBrown },
     },
   },
 });

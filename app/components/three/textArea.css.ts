@@ -1,5 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
+import { vars } from "../../theme.css";
 
 export const textArea = style({
   position: "absolute",
@@ -50,7 +51,7 @@ export const selectWrapper = style({
   width: "7rem",
   padding: "8px 12px",
   borderRadius: "20px",
-  backgroundColor: "#FEE8B4",
+  backgroundColor: vars.colors.yellowBackground,
 });
 
 export const options = style({
@@ -58,9 +59,9 @@ export const options = style({
   textAlign: "center",
   ":hover": {
     cursor: "pointer",
-    background: "#81353F",
+    background: vars.colors.brown,
     opacity: "70%",
-    color: "white",
+    color: vars.colors.white,
     borderRadius: "0.5rem",
   },
 });
@@ -74,7 +75,7 @@ export const text = style({
 export const inputBubble = style({
   display: "flex",
   maxWidth: "1000px",
-  background: "#fef6e0",
+  background: vars.colors.whiteInput,
   borderRadius: "1rem",
   padding: "1rem 1rem",
   margin: "12rem auto",
@@ -91,9 +92,9 @@ export const sendButton = style({
   width: "4rem",
   height: "2rem",
   borderRadius: "0.5rem",
-  background: "#81343f",
+  background: vars.colors.brown,
 
   ":hover": {
-    // #81343f
+    cursor: "pointer",
   },
 });
