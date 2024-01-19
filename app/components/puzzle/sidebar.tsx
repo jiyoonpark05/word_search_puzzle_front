@@ -1,5 +1,6 @@
 import { BoardProps } from "./puzzle.types";
 import * as css from "./sidebar.css";
+import Time from "./time";
 
 const Sidebar = ({ ...props }: BoardProps) => {
   const { answers, foundAnswers } = props;
@@ -11,8 +12,8 @@ const Sidebar = ({ ...props }: BoardProps) => {
 
   return (
     <div className={css.container}>
-      <div className={css.timmerWrapper}>timmer</div>
-      <div className={css.wordListTitle}>wordListHeader</div>
+      <Time />
+      <div className={css.wordListTitle}>Word List</div>
       <div className={css.wordListWrapper}>{wordList}</div>
     </div>
   );

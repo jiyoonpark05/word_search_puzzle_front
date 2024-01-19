@@ -4,9 +4,11 @@ import { url } from "inspector";
 import backgroundImg from "@/public/images/background.png";
 export const playWrapper = style({
   display: "flex",
-  width: "100%",
+  justifyContent: "space-between",
   height: "100%",
   flexDirection: "row",
+  padding: "10px",
+
   "@media": {
     "screen and (max-width: 700px)": {
       flexDirection: "column",

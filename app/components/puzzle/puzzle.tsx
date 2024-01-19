@@ -81,10 +81,10 @@ const Puzzle = ({ ...props }: BoardProps) => {
 
 const Container = styled.div`
   position: relative;
-  flex-basis: 70%;
-  max-width: calc(100vw - 50%);
+  flex-basis: 50%;
+  aspect-ratio: auto 1/1;
   width: 100%;
-  /* max-height: calc(100% - 40px); */
+  border-radius: 12px;
   background-color: white;
 `;
 

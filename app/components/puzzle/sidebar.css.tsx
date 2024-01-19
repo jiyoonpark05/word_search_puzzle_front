@@ -5,21 +5,21 @@ export const container = style({
   flexBasis: "30%",
 });
 
-export const timmerWrapper = style({});
-
 export const wordListTitle = style({
-  padding: "1rem 1rem",
-  background: "black",
+  color: vars.colors.whiteInput,
+  fontSize: "24px",
 });
 
 export const wordListWrapper = style({
-  maxHeight: "calc(100vh - 25%)",
   overflow: "scroll",
-  background: vars.colors.yellowBackground,
+  padding: "4px 8px",
+  borderRadius: "8px",
+  background: vars.colors.whiteInput,
+  boxShadow: "0 4px 4px 0px rgba(0, 0, 0, 0.3)",
 });
 
 export const word = style({
   fontWeight: 600,
-  fontSize: "18px",
-  padding: "1rem 1rem",
+  fontSize: "16px",
+  padding: "8px 16px",
 });
