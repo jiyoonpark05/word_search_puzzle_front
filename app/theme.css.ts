@@ -1,4 +1,9 @@
-import { createTheme } from "@vanilla-extract/css";
+import {
+  createTheme,
+  globalFontFace,
+  globalStyle,
+  style,
+} from "@vanilla-extract/css";
 
 export const [themeClass, vars] = createTheme({
   colors: {
@@ -14,5 +19,6 @@ export const [themeClass, vars] = createTheme({
     textH1: "#645531",
     textH2: "#887A67",
     textH3: "#F7F6E6",
+    textH4: "#565655",
   },
 });

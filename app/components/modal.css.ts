@@ -4,7 +4,7 @@ import { vars } from "../theme.css";
 
 export const modalBackground = style({
   position: "absolute",
-  zIndex: 1,
+  zIndex: 20,
   width: "100%",
   height: "100%",
   top: 0,
@@ -17,13 +17,13 @@ export const modalWrapper = style({
   width: "100%",
   display: "flex",
   justifyContent: "center",
-  zIndex: 2,
+  zIndex: 30,
   top: "40%",
 });
 
 export const modalContainer = recipe({
   base: {
-    padding: "1rem 2rem 2rem 2rem",
+    padding: "1rem 2rem",
     background: vars.colors.whiteInput,
     borderRadius: "0.5rem",
   },
@@ -61,9 +61,54 @@ export const modalName = style({
   },
 });
 
+export const message = style({});
+
 export const buttonArea = style({
   display: "flex",
-  flexDirection: "row-reverse",
+  justifyContent: "center",
+  columnGap: "1rem",
+  paddingTop: "1.5rem",
+});
+
+export const button = recipe({
+  base: {
+    width: "fit-content",
+    padding: "0.25rem 1rem",
+    borderRadius: "0.5rem",
+    fontSize: "1.2rem",
+
+    color: vars.colors.white,
+
+    ":hover": {
+      cursor: "pointer",
+    },
+
+    "@media": {
+      "screen and (max-width: 600px)": {
+        fontSize: "1rem",
+      },
+    },
+  },
+  variants: {
+    type: {
+      confirm: {},
+      cancel: {
+        backgroundColor: "#df852e",
+      },
+      home: {
+        backgroundColor: "#0cc6b6",
+        ":before": {
+          content: "-",
+          width: "200px",
+          height: "200px;",
+          paddingRight: "0.3rem",
+        },
+      },
+      result: {
+        backgroundColor: "#66d267",
+      },
+    },
+  },
 });
 
 export const buttonConfim = style({

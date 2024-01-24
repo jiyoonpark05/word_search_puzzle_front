@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { themeClass } from "./theme.css";
 import * as css from "./layout.css";
-
+import { Quicksand } from "next/font/google";
 import { Header } from "./components/header";
+import RecoilRootWrapper from "./recoilRootWrapper";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Puzzle! Puzzle!",
@@ -18,7 +20,9 @@ export default function RootLayout({
     <html lang="en" className={themeClass}>
       <body className={css.background}>
         <Header />
-        <main className={css.mainStlye}>{children}</main>
+        <RecoilRootWrapper>
+          <main className={css.mainStlye}>{children}</main>
+        </RecoilRootWrapper>
       </body>
     </html>
   );

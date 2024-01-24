@@ -1,53 +1,61 @@
-import styled from "styled-components";
-import { vars } from "../../theme.css";
+import { useEffect, useState } from "react";
+import * as css from "./time.css";
 
-const Time = () => {
+const Time = ({ initialDuration, onFinish, isComplete, onClear }) => {
+  const [duration, setDuration] = useState(initialDuration);
+  const [timmerFinished, setTimerFinished] = useState(false);
+
+  useEffect(() => {
+    let timerId;
+
+    if (duration > 0 && !timmerFinished) {
+      timerId = setInterval(() => {
+        setDuration((prevDuration: number) => prevDuration - 1);
+      }, 1000);
+    } else if (duration === 0 && !timmerFinished) {
+      setTimerFinished(true);
+      onFinish();
+    }
+
+    // Cleanup on component unmount or if the timer is stopped
+    return () => clearInterval(timerId);
+  }, [duration, onFinish, timmerFinished]);
+
+  const formatTime = (timeInSeconds: number) => {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = timeInSeconds % 60;
+
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
+      2,
+      "0"
+    )}`;
+  };
+  const calculateProgress = () => {
+    return (1 - duration / initialDuration) * 100;
+  };
+
+  const handleStopTimer = () => {
+    setTimerFinished(true);
+    onClear();
+  };
+
   return (
-    <Container>
-      <Wrapper>
-        <Timmer>
-          <Block />
-          <Block />
-          <Block />
-          <Block />
-          <Block />
-          <Block />
-        </Timmer>
-        <LeftTime>65c</LeftTime>
-      </Wrapper>
-    </Container>
+    <>
+      <div className={css.container}>
+        <div className={css.leftTime}>{formatTime(duration)}</div>
+        <progress
+          className={css.customProgress}
+          value={calculateProgress()}
+          max="100"
+        ></progress>
+      </div>
+      {duration > 0 && isComplete && (
+        <div className={css.buttonComplete} onClick={handleStopTimer}>
+          GAME CLEAR
+        </div>
+      )}
+    </>
   );
 };
-
-const Container = styled.div`
-  border: 1px solid;
-
-  height: 5rem;
-`;
-
-const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  column-gap: 1rem;
-`;
-
-const Timmer = styled.div`
-  display: flex;
-  flex-basis: 98%;
-  grid-template-columns: repeat(6, 1fr);
-  justify-content: space-around;
-  height: 30px;
-  border-radius: 4px;
-  background-color: #f8f6e5;
-`;
-
-const Block = styled.span`
-  background: #f5ca5f;
-`;
-
-const LeftTime = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-`;
 
 export default Time;

@@ -9,7 +9,7 @@ import {
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
-import { RecoilRoot, useRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { Background } from "./Background";
 import { Bunny } from "./Bunny";
 import { bunnyState, modalState } from "../../recoil/atoms";
@@ -17,7 +17,7 @@ import TextArea from "./TextArea";
 
 const ThreeCanvas = () => {
   return (
-    <RecoilRoot>
+    <>
       <Canvas
         shadows
         camera={{
@@ -42,7 +42,7 @@ const ThreeCanvas = () => {
       </Canvas>
       <TextArea />
       <Loader />
-    </RecoilRoot>
+    </>
   );
 };
 

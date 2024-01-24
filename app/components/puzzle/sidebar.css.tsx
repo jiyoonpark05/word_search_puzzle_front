@@ -19,7 +19,16 @@ export const wordListWrapper = style({
 });
 
 export const word = style({
+  color: vars.colors.black,
   fontWeight: 600,
   fontSize: "16px",
   padding: "8px 16px",
+});
+
+export const wordFound = style({
+  color: vars.colors.textH4,
+  fontWeight: 600,
+  fontSize: "16px",
+  padding: "8px 16px",
+  textDecoration: "line-through",
 });

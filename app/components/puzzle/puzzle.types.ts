@@ -30,6 +30,15 @@ export interface puzzleModel {
   puzzle: Array<string[]>;
 }
 
+export type SizeProps = {
+  windowWidth: number;
+};
+
+export type TimeProps = {
+  isComplete: boolean;
+  handleTimerFinish: () => void;
+};
+
 export type BoardProps = {
   words: Array<string[]>;
   answers: Word[];
@@ -39,7 +48,8 @@ export type BoardProps = {
   disabled: boolean | null;
   handleStart: (coord: Coordinate) => void;
   handleMove: (coord: Coordinate) => void;
-  handleFinished: () => void;
+  handleGameClear: () => void;
+  handleTimerFinish: () => void;
   setWordBoard: (wordSearch: puzzleModel) => void;
   setFoundAnswer: (words: Word[]) => void;
 };
@@ -48,7 +58,6 @@ export interface puzzleProps {
   wordBoardProps: BoardProps;
   handleStart: (coord: Coordinate) => void;
   handleMove: (coord: Coordinate) => void;
-  handleFinished: () => void;
   setPuzzle: (wordSearch: puzzleModel) => void;
   setFoundAnswer: (words: Word[]) => void;
 }
