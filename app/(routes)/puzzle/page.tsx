@@ -3,14 +3,12 @@ import * as css from "./page.css";
 import Puzzle from "../../components/puzzle/puzzle";
 import { puzzleModel } from "@/app/components/puzzle/puzzle.types";
 import useBoard from "@/app/components/puzzle/useBoard.hook";
-import Sidebar from "@/app/components/puzzle/sidebar";
-import { RecoilRoot } from "recoil";
 import { useModal } from "@/app/components/useModal.hook";
 import { ReactNode, useEffect, useState } from "react";
 import Modal from "@/app/components/modal";
 import Time from "@/app/components/puzzle/time";
-import GameClear from "@/app/components/modalContents/gameClear";
-import GameOver from "@/app/components/modalContents/gameOver";
+import GameResult from "@/app/components/modalContents/gameResult";
+import GamePreview from "@/app/components/modalContents/gamePreview";
 
 interface PuzzleProps {
   puzzle: puzzleModel;
@@ -20,8 +18,23 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
   const { isOpen, openModal, closeModal } = useModal();
   const [modalChild, setModalChild] = useState<ReactNode | null>(null);
   const [size, setSize] = useState<number>(window.innerWidth);
+  const [gameStart, setGameStart] = useState(false);
+  const DUMMY_WORDS = ["ORM", "PROGRAM", "WORLD"];
+
+  // open game information modal before play
   useEffect(() => {
-    console.log(size);
+    const element = (
+      <GamePreview
+        words={DUMMY_WORDS}
+        handleClickGameStart={(e: React.MouseEvent) => setGameStart(true)}
+      />
+    );
+    setModalChild(element);
+    openModal();
+  }, []);
+
+  // arrange the elements depends on the window width
+  useEffect(() => {
     const resizeListener = () => {
       setSize(window.innerWidth);
     };
@@ -86,20 +99,37 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
   };
 
   const boardProps = useBoard(puzzleModel, {});
+
   const handleTimerFinish = () => {
-    const element = <GameOver />;
+    setGameStart(false);
+    const element = <GameResult result="F" />;
     setModalChild(element);
     openModal();
   };
 
   const handleGameClear = () => {
-    const element = <GameClear />;
+    setGameStart(false);
+    const element = <GameResult result="P" />;
     setModalChild(element);
     openModal();
   };
 
   const isComplete =
     boardProps.answers.length === boardProps.foundAnswers.length;
+
+  const answerArray = new Set(boardProps.foundAnswers.map((item) => item.word));
+
+  const wordList = boardProps.answers.map((el) => {
+    // check if the word already found or not
+    return (
+      <div
+        key={el.word}
+        className={answerArray.has(el.word) ? css.wordFound : css.word}
+      >
+        {el.word}
+      </div>
+    );
+  });
 
   return (
     <>
@@ -112,22 +142,18 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
         {modalChild}
       </Modal>
       <div className={css.playWrapper}>
-        {size <= 900 && (
-          <Time
-            initialDuration={60}
-            onFinish={handleTimerFinish}
-            isComplete={isComplete}
-            onClear={handleGameClear}
-          />
-        )}
         <Puzzle {...boardProps} />
-        <Sidebar
-          {...boardProps}
+        <Time
+          isStart={gameStart}
+          initialDuration={60}
           isComplete={isComplete}
-          handleTimerFinish={handleTimerFinish}
-          handleGameClear={handleGameClear}
-          windowWidth={size}
+          onClear={handleGameClear}
+          onFinish={handleTimerFinish}
         />
+        <div>
+          <div className={css.wordListTitle}>Word List</div>
+          <div className={css.wordListWrapper}>{wordList}</div>
+        </div>
       </div>
     </>
   );

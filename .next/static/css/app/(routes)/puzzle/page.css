@@ -1,21 +1,6 @@
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/(routes)/puzzle/page.css.ts.vanilla.css","source":"LnBhZ2VfcGxheVdyYXBwZXJfXzFjOHVobHUwIHsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5OwogIGZsZXgtZGlyZWN0aW9uOiByb3c7CiAgcGFkZGluZzogMTBweDsKfQpAbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA5MDBweCkgewogIC5wYWdlX3BsYXlXcmFwcGVyX18xYzh1aGx1MCB7CiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogICAgcm93LWdhcDogMXJlbTsKICB9Cn0="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.page_playWrapper__1c8uhlu0 {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  padding: 10px;
-}
-@media screen and (max-width: 900px) {
-  .page_playWrapper__1c8uhlu0 {
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-}
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/theme.css.ts.vanilla.css","source":"LnRoZW1lX3RoZW1lQ2xhc3NfX3Z6aTQxMDAgewogIC0tY29sb3JzLWJsYWNrX192emk0MTAxOiAjMDAwMDAwOwogIC0tY29sb3JzLXdoaXRlX192emk0MTAyOiAjRkZGRkZGOwogIC0tY29sb3JzLXdoaXRlSW5wdXRfX3Z6aTQxMDM6ICNGOEY2RTU7CiAgLS1jb2xvcnMtcHJpbWFyeV9fdnppNDEwNDogIzc3RDVDMjsKICAtLWNvbG9ycy15ZWxsb3dfX3Z6aTQxMDU6ICNGNUNBNUY7CiAgLS1jb2xvcnMteWVsbG93QmFja2dyb3VuZF9fdnppNDEwNjogI0ZFRThCNDsKICAtLWNvbG9ycy1saWdodEJyb3duX192emk0MTA3OiAjRTVDODk0OwogIC0tY29sb3JzLWJyb3duX192emk0MTA4OiAjODEzNTNGOwogIC0tY29sb3JzLXRleHRIMV9fdnppNDEwOTogIzY0NTUzMTsKICAtLWNvbG9ycy10ZXh0SDJfX3Z6aTQxMGE6ICM4ODdBNjc7CiAgLS1jb2xvcnMtdGV4dEgzX192emk0MTBiOiAjRjdGNkU2OwogIC0tY29sb3JzLXRleHRINF9fdnppNDEwYzogIzU2NTY1NTsKfQ=="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/theme.css.ts.vanilla.css","source":"LnRoZW1lX3RoZW1lQ2xhc3NfX3Z6aTQxMDAgewogIC0tY29sb3JzLWJsYWNrX192emk0MTAxOiAjMDAwMDAwOwogIC0tY29sb3JzLXdoaXRlX192emk0MTAyOiAjRkZGRkZGOwogIC0tY29sb3JzLXdoaXRlSW5wdXRfX3Z6aTQxMDM6ICNGOEY2RTU7CiAgLS1jb2xvcnMtcHJpbWFyeV9fdnppNDEwNDogIzc3RDVDMjsKICAtLWNvbG9ycy15ZWxsb3dfX3Z6aTQxMDU6ICNGNUNBNUY7CiAgLS1jb2xvcnMteWVsbG93QmFja2dyb3VuZF9fdnppNDEwNjogI0ZFRThCNDsKICAtLWNvbG9ycy1saWdodEJyb3duX192emk0MTA3OiAjRTVDODk0OwogIC0tY29sb3JzLWJyb3duX192emk0MTA4OiAjODEzNTNGOwogIC0tY29sb3JzLXRleHRIMV9fdnppNDEwOTogIzY0NTUzMTsKICAtLWNvbG9ycy10ZXh0SDJfX3Z6aTQxMGE6ICM4ODdBNjc7CiAgLS1jb2xvcnMtdGV4dEgzX192emk0MTBiOiAjRjdGNkU2OwogIC0tY29sb3JzLXRleHRINF9fdnppNDEwYzogIzU2NTY1NTsKICAtLWNvbG9ycy10ZXh0QnViYmxlX192emk0MTBkOiAjODM3MTU2Owp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .theme_themeClass__vzi4100 {
   --colors-black__vzi4101: #000000;
   --colors-white__vzi4102: #FFFFFF;
@@ -29,36 +14,149 @@
   --colors-textH2__vzi410a: #887A67;
   --colors-textH3__vzi410b: #F7F6E6;
   --colors-textH4__vzi410c: #565655;
+  --colors-textBubble__vzi410d: #837156;
 }
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/puzzle/sidebar.css.tsx.vanilla.css","source":"LnNpZGViYXJfY29udGFpbmVyX18xaDJxaDlsMCB7CiAgZmxleC1iYXNpczogMzAlOwp9Ci5zaWRlYmFyX3dvcmRMaXN0VGl0bGVfXzFoMnFoOWwxIHsKICBjb2xvcjogdmFyKC0tY29sb3JzLXdoaXRlSW5wdXRfX3Z6aTQxMDMpOwogIGZvbnQtc2l6ZTogMjRweDsKfQouc2lkZWJhcl93b3JkTGlzdFdyYXBwZXJfXzFoMnFoOWwyIHsKICBvdmVyZmxvdzogc2Nyb2xsOwogIHBhZGRpbmc6IDRweCA4cHg7CiAgYm9yZGVyLXJhZGl1czogOHB4OwogIGJhY2tncm91bmQ6IHZhcigtLWNvbG9ycy13aGl0ZUlucHV0X192emk0MTAzKTsKICBib3gtc2hhZG93OiAwIDRweCA0cHggMHB4IHJnYmEoMCwgMCwgMCwgMC4zKTsKfQouc2lkZWJhcl93b3JkX18xaDJxaDlsMyB7CiAgY29sb3I6IHZhcigtLWNvbG9ycy1ibGFja19fdnppNDEwMSk7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBmb250LXNpemU6IDE2cHg7CiAgcGFkZGluZzogOHB4IDE2cHg7Cn0KLnNpZGViYXJfd29yZEZvdW5kX18xaDJxaDlsNCB7CiAgY29sb3I6IHZhcigtLWNvbG9ycy10ZXh0SDRfX3Z6aTQxMGMpOwogIGZvbnQtd2VpZ2h0OiA2MDA7CiAgZm9udC1zaXplOiAxNnB4OwogIHBhZGRpbmc6IDhweCAxNnB4OwogIHRleHQtZGVjb3JhdGlvbjogbGluZS10aHJvdWdoOwp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.sidebar_container__1h2qh9l0 {
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/(routes)/puzzle/page.css.ts.vanilla.css","source":"LnBhZ2VfcGxheVdyYXBwZXJfXzFjOHVobHUwIHsKICBkaXNwbGF5OiBncmlkOwogIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMmZyIDFmcjsKICBwYWRkaW5nOiA4cHggNSU7Cn0KLnBhZ2VfY29udGFpbmVyX18xYzh1aGx1MSB7CiAgZmxleC1iYXNpczogMzAlOwp9Ci5wYWdlX3dvcmRMaXN0VGl0bGVfXzFjOHVobHUyIHsKICBjb2xvcjogdmFyKC0tY29sb3JzLXdoaXRlSW5wdXRfX3Z6aTQxMDMpOwogIGZvbnQtc2l6ZTogMjRweDsKfQoucGFnZV93b3JkTGlzdFdyYXBwZXJfXzFjOHVobHUzIHsKICBvdmVyZmxvdzogc2Nyb2xsOwogIHBhZGRpbmc6IDRweCA4cHg7CiAgYm9yZGVyLXJhZGl1czogOHB4OwogIGJhY2tncm91bmQ6IHZhcigtLWNvbG9ycy13aGl0ZUlucHV0X192emk0MTAzKTsKICBib3gtc2hhZG93OiAwIDRweCA0cHggMHB4IHJnYmEoMCwgMCwgMCwgMC4zKTsKfQoucGFnZV93b3JkX18xYzh1aGx1NCB7CiAgY29sb3I6IHZhcigtLWNvbG9ycy1ibGFja19fdnppNDEwMSk7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBmb250LXNpemU6IDE2cHg7CiAgcGFkZGluZzogOHB4IDE2cHg7Cn0KLnBhZ2Vfd29yZEZvdW5kX18xYzh1aGx1NSB7CiAgY29sb3I6IHZhcigtLWNvbG9ycy10ZXh0SDRfX3Z6aTQxMGMpOwogIGZvbnQtd2VpZ2h0OiA2MDA7CiAgZm9udC1zaXplOiAxNnB4OwogIHBhZGRpbmc6IDhweCAxNnB4OwogIHRleHQtZGVjb3JhdGlvbjogbGluZS10aHJvdWdoOwp9CkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEwMDBweCkgewogIC5wYWdlX3BsYXlXcmFwcGVyX18xYzh1aGx1MCB7CiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IGF1dG87CiAgICByb3ctZ2FwOiAxcmVtOwogICAgcGFkZGluZzogOHB4OwogIH0KfQ=="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_playWrapper__1c8uhlu0 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 8px 5%;
+}
+.page_container__1c8uhlu1 {
   flex-basis: 30%;
 }
-.sidebar_wordListTitle__1h2qh9l1 {
+.page_wordListTitle__1c8uhlu2 {
   color: var(--colors-whiteInput__vzi4103);
   font-size: 24px;
 }
-.sidebar_wordListWrapper__1h2qh9l2 {
+.page_wordListWrapper__1c8uhlu3 {
   overflow: scroll;
   padding: 4px 8px;
   border-radius: 8px;
   background: var(--colors-whiteInput__vzi4103);
   box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
-.sidebar_word__1h2qh9l3 {
+.page_word__1c8uhlu4 {
   color: var(--colors-black__vzi4101);
   font-weight: 600;
   font-size: 16px;
   padding: 8px 16px;
 }
-.sidebar_wordFound__1h2qh9l4 {
+.page_wordFound__1c8uhlu5 {
   color: var(--colors-textH4__vzi410c);
   font-weight: 600;
   font-size: 16px;
   padding: 8px 16px;
   text-decoration: line-through;
+}
+@media screen and (max-width: 1000px) {
+  .page_playWrapper__1c8uhlu0 {
+    grid-template-columns: auto;
+    row-gap: 1rem;
+    padding: 8px;
+  }
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modal.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE61UTW+jMBS891dYqiq1BxCQhKT0sh+X9rKnlfYYGfsR3AUb2SZJs+p/X2MwgYRkc1hFQrHhzcybN7ZfCoqLtX1+w+T3Roqa0/X6nZJ8BgH6c4dQJRTTTPAE4VSJotbwYnYPHuMU9gmKgma5Y1TnCQqD4KFZ5sA2uT6utagSZD9MexaPiELIBG2xfPTahfLSwrxfr7cHNg+D8KmpEBUmTH8kaNFgfd75A82/JK4qkE5weEXwiULKVFVgg5oVsG823mulWfZhhHAN3Ggn5gly1Oss6JuZn4v5biox40c5USsHU8r4xlBLKE8eY0dOvNjlTMMbr2rtDJlZQ1IhKUhPYspqZWz1FxapF0MKoeAVMD0qia2Sf/esjNfgpaB3APxlJN5fPHQTHNNH82qPAvNr/gxVSKHUm0F2GpZWgxtDJ3oQlX6H1FI1wagEaycwtvkHLsFhrizmVJA07PVr6Ix7tsZlpk1PsQMY1R2X3dp1ElJR0CEbKIU3Pdez5WpwPVywDR8mpFNwv5otw0U8MM5rk386orTWWvCvErBDxzdOaMRZl9zb4CrpszRiDadZf5oOHGt67IkCERK354YLDmd1roYM55gx7bSN4hL40WIU8unMjmYS+m4qUwO1p8HNM3q6LC/JxRZkG4yLSepq9EcFa4I5gcLVU1t5fk3d02y1iCZssRi5OIYSLiEEhMRpfAvCoIcJnHBJYzK7CSeFTEgYTiwKgmo/PHjtxjA9sn0R+LOp/HSmCZ4xWTqm7JLWOKZRvLwR5Hrb8Yqu4tWtUP+n8y8lUIaRItJciAhzih5LvPc6xLgBeLIc12+ok5y78H8eC6fO2Liqr/n8C02WSBW2BwAA"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.modal_modalBackground__jdch3e0 {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--colors-black__vzi4101);
+  opacity: 50%;
+}
+.modal_modalWrapper__jdch3e1 {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 30;
+  top: 40%;
+}
+.modal_modalContainer__jdch3e2 {
+  padding: 1rem 1rem 1rem 1rem;
+  background: var(--colors-whiteInput__vzi4103);
+  border-radius: 0.5rem;
+}
+.modal_closeHeader__jdch3e6 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5% 0;
+  border-radius: 24px 0 0 24px;
+}
+.modal_crossIcon__jdch3e7 {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.modal_modalName__jdch3e8 {
+  color: var(--colors-textH1__vzi4109);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.modal_message__jdch3e9 {
+  text-align: center;
+  color: #837156;
+  padding-top: 0.5rem;
+}
+.modal_buttonArea__jdch3ea {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding-top: 1.5rem;
+}
+.modal_buttonText__jdch3eb {
+  text-decoration: none;
+}
+.modal_button__jdch3ec {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--colors-white__vzi4102);
+}
+.modal_button__jdch3ec:hover {
+  cursor: pointer;
+}
+.modal_button_type_cancel__jdch3ed {
+  background-color: #df852e;
+}
+.modal_button_type_home__jdch3ee {
+  background-color: #0cc6b6;
+}
+.modal_button_type_home__jdch3ee:hover {
+  background-color: #17d6c3;
+}
+.modal_button_type_home__jdch3ee:before {
+  width: 200px;
+  height: 200px;;
+  padding-right: 0.3rem;
+}
+.modal_button_type_confirm__jdch3ef {
+  background-color: #66d267;
+}
+.modal_button_type_confirm__jdch3ef:hover {
+  background-color: #68d868;
+}
+.modal_button_type_confirm__jdch3ef:before {
+  width: 200px;
+  height: 200px;;
+  padding-right: 0.3rem;
+}
+@media screen and (max-width: 600px) {
+  .modal_modalName__jdch3e8 {
+    font-size: 1.5rem;
+  }
+  .modal_button__jdch3ec {
+    font-size: 1rem;
+  }
 }
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/puzzle/time.css.tsx.vanilla.css","source":"LnRpbWVfY29udGFpbmVyX19uOTZtam4wIHsKICBwYWRkaW5nLWJvdHRvbTogMC41cmVtOwp9Ci50aW1lX2xlZnRUaW1lX19uOTZtam4xIHsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogY2VudGVyOwogIGNvbG9yOiB2YXIoLS1jb2xvcnMtYmxhY2tfX3Z6aTQxMDEpOwogIGZvbnQtc2l6ZTogNDhweDsKICBmb250LXdlaWdodDogNjAwOwp9Ci50aW1lX2N1c3RvbVByb2dyZXNzX19uOTZtam4yIHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDMwcHg7CiAgYm9yZGVyLXJhZGl1czogOHB4Owp9Ci50aW1lX2N1c3RvbVByb2dyZXNzX19uOTZtam4yOjotd2Via2l0LXByb2dyZXNzLWJhciB7CiAgYmFja2dyb3VuZC1jb2xvcjogI2Y4ZjZlNTsKICBib3JkZXItcmFkaXVzOiA0cHg7Cn0KLnRpbWVfY3VzdG9tUHJvZ3Jlc3NfX245Nm1qbjI6Oi13ZWJraXQtcHJvZ3Jlc3MtdmFsdWUgewogIGJhY2tncm91bmQtY29sb3I6ICAjZjVjYTVmOwogIGJvcmRlci1yYWRpdXM6IDRweDsKfQoudGltZV9idXR0b25Db21wbGV0ZV9fbjk2bWpuMyB7CiAgZm9udC1zaXplOiAyNHB4OwogIHRleHQtYWxpZ246IGNlbnRlcjsKICBmb250LXdlaWdodDogNjAwOwogIGNvbG9yOiB2YXIoLS1jb2xvcnMtdGV4dEgzX192emk0MTBiKTsKICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDc1NjYzOwogIGJvcmRlci1yYWRpdXM6IDhweDsKICBwYWRkaW5nOiAwLjVyZW0gMCA7CiAgbWFyZ2luOiAwLjVyZW0gMDsKfQoudGltZV9idXR0b25Db21wbGV0ZV9fbjk2bWpuMzpob3ZlciB7CiAgY3Vyc29yOiBwb2ludGVyOwogIGJhY2tncm91bmQtY29sb3I6ICMwNjVmNmQ7Cn0="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
@@ -100,161 +198,37 @@
   cursor: pointer;
   background-color: #065f6d;
 }
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modal.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE7VWy27bMBC89yuIFAGSgwxZjh1XubTpJbm0hxTt0aDElcWEIgWSiu0U+fdSkqmHTfkRoDAgm5R3Zzi7HHKUCYLZonre4/hlKUXByWLxTOJ0Aj76+wmhXCiqqeAhwpESrNBwZ2bfPMoJrEMU+OVwRYlOQzT2/ctymAJdproda5GHqPpj1KB4sWBChugVyyuvHigvYub9YvH6Rm/G/vi6jBA5jqnehGha5nr/NOpw/iNxnoO0hMcHCO8wJFTlDJusCYN1OfFcKE2TjSHCNXDDPTZPkL21TvxmMTf7ZL6bSEx5Syeo6WBCKF8aaAkZCsyjr8OOAquUanjkeaGtDJNKhkhIAtKTmNBCGTFH0ypTQyFmQsEDYNLizyr84yuVZbHuelRH08ttvfqwwU2+Rr75lD+66FIo9WgyWuzbCtuKviXbaYxmJi6kKtsgF7TWuy/qD5yBzTmvcrraRsNaP4ytYF8qwRKzPE/RNwgb0aup1ZZCJBjpoEWF1oJ/k4AtHD5RvrZRDJsi494S53W1O5p6VdeMd6tWo1rEqCtaQrXF6NXGHwVlkgZgoDF6AoxHVgKXelXLWfGC62F6YSpeQdZVGCzbNkZvcljEmMfAbDypIvcd4DNJ5tMABnKkou0AGMrgx/Esmp2SIYwgERK2rbQt4YV30fGIwPfzdbdb64luNWX9wh9NnPWsYCWogmkLnAxRn81IMLvdy2HcJKGZjV7+/8445sxSrLhtkvn1R3tpZ1knddTSeMATaG0WaQNT997MKPes58zbjm83ZW3+fUves9IS72deHiEWjrrgHP/fYfnsZokZXXLP6JSpw+7hUuAX1azp5hc3QPntESohrs/BOnP5xhRxC9Aa8Pl+umdjHX6/MStg51xmH6fp6tgj4BY1c6N2ZfaPqxBYFfDZKjyaClsyvH8XqIGP7dTTMh/aQ0e39QYYE6vu3a9e7eykS4eTF1VPwExNgSy0bMshBgzwDDqi0MxcsA47EyJCG2ykUxq/nME1wUw1ZPNTyLLyELjvot9Whvc1A0IxUrEEU3fMCbrK8Noa06w8TK6r/IcvOs5mQ+i9DXTdHvpRQzGu0+VY5GETGjhV3PGOfXp+/P72cpyFfke393+CMyNJ7wwAAA=="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.modal_modalBackground__jdch3e0 {
-  position: absolute;
-  z-index: 20;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: var(--colors-black__vzi4101);
-  opacity: 50%;
-}
-.modal_modalWrapper__jdch3e1 {
-  position: absolute;
-  width: 100%;
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modalContents/gameClear.css.tsx.vanilla.css","source":"LmdhbWVDbGVhcl9yZXN1bHRDb250YWluZXJfX2dldHl4NTAgewogIGRpc3BsYXk6IGZsZXg7CiAgYm9yZGVyOiBzb2xpZCAxLjVweCAjOTI4ZTgzIDsKICBib3JkZXItcmFkaXVzOiA0cHg7CiAgcGFkZGluZzogMXJlbSAwLjVyZW07Cn0KLmdhbWVDbGVhcl9zZXR0aW5nX19nZXR5eDUyIHsKICBkaXNwbGF5OiBmbGV4OwogIGNvbHVtbi1nYXA6IDFyZW07Cn0KLmdhbWVDbGVhcl9zZXR0aW5nVGl0bGVfX2dldHl4NTMgewogIGNvbG9yOiAjN2U3MjVjOwp9Ci5nYW1lQ2xlYXJfc2V0dGluZ1ZhbHVlX19nZXR5eDU0IHsKICBjb2xvcjogIzdlNzI1YzsKICBmb250LXdlaWdodDogNTAwOwp9Ci5nYW1lQ2xlYXJfYmFyX19nZXR5eDU1IHsKICB3aWR0aDogMnB4OwogIGJhY2tncm91bmQtY29sb3I6ICM5MjhlODM7CiAgbWFyZ2luOiAwIDE1cHggMCAzMHB4Owp9Ci5nYW1lQ2xlYXJfdGltZV9fZ2V0eXg1NiB7CiAgZGlzcGxheTogZmxleDsKICBhbGlnbi1pdGVtczogY2VudGVyOwogIGp1c3RpZnktY29udGVudDogY2VudGVyOwogIGNvbG9yOiAjODM3MTU2OwogIGZvbnQtc2l6ZTogMjRweDsKICBmb250LXdlaWdodDogNzAwOwp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.gameClear_resultContainer__getyx50 {
   display: flex;
-  justify-content: center;
-  z-index: 30;
-  top: 40%;
-}
-.modal_modalContainer__jdch3e2 {
-  padding: 1rem 2rem;
-  background: var(--colors-whiteInput__vzi4103);
-  border-radius: 0.5rem;
-}
-.modal_closeHeader__jdch3e6 {
-  display: flex;
-  justify-content: right;
-  padding: 1.5% 0;
-  border-radius: 24px 0 0 24px;
-}
-.modal_crossIcon__jdch3e7 {
-  width: 1.5rem;
-  height: 1.5rem;
-  cursor: pointer;
-}
-.modal_modalName__jdch3e8 {
-  color: var(--colors-textH1__vzi4109);
-  font-size: 2rem;
-  font-weight: bold;
-}
-.modal_buttonArea__jdch3ea {
-  display: flex;
-  justify-content: center;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  padding-top: 1.5rem;
-}
-.modal_button__jdch3eb {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.25rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  color: var(--colors-white__vzi4102);
-}
-.modal_button__jdch3eb:hover {
-  cursor: pointer;
-}
-.modal_button_type_cancel__jdch3ed {
-  background-color: #df852e;
-}
-.modal_button_type_home__jdch3ee {
-  background-color: #0cc6b6;
-}
-.modal_button_type_home__jdch3ee:before {
-  content: "-";
-  width: 200px;
-  height: 200px;;
-  padding-right: 0.3rem;
-}
-.modal_button_type_result__jdch3ef {
-  background-color: #66d267;
-}
-.modal_buttonConfim__jdch3eg {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.25rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  background-color: var(--colors-brown__vzi4108);
-  color: var(--colors-white__vzi4102);
-}
-.modal_buttonConfim__jdch3eg:hover {
-  cursor: pointer;
-}
-.modal_gameSetting__jdch3eh {
-  display: flex;
-  min-width: 18rem;
-  -moz-column-gap: 10%;
-       column-gap: 10%;
+  border: solid 1.5px #928e83 ;
+  border-radius: 4px;
   padding: 1rem 0.5rem;
 }
-.modal_gameOption__jdch3ei {
+.gameClear_setting__getyx52 {
   display: flex;
-}
-.modal_gameOptionSetting__jdch3ej {
-  display: flex;
-  align-items: center;
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
-.modal_gameSettingTitle__jdch3ek {
+.gameClear_settingTitle__getyx53 {
+  color: #7e725c;
+}
+.gameClear_settingValue__getyx54 {
+  color: #7e725c;
+  font-weight: 500;
+}
+.gameClear_bar__getyx55 {
+  width: 2px;
+  background-color: #928e83;
+  margin: 0 15px 0 30px;
+}
+.gameClear_time__getyx56 {
   display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-  color: var(--colors-textH1__vzi4109);
-  font-size: 1.5rem;
-}
-.modal_gameSettingValueWrapper__jdch3el {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-  font-size: 1.5rem;
-}
-.modal_gameSettingValue__jdch3em {
-  display: flex;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-  color: var(--colors-textH2__vzi410a);
-  font-size: 1.5rem;
-}
-.modal_gameSettingValueItem__jdch3en {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-.modal_gameSettingValueItem__jdch3en:hover {
-  cursor: pointer;
-  background-color: var(--colors-yellowBackground__vzi4106);
-  border-radius: 0.5rem;
-}
-.modal_gameSettingValueItem_isSelected_true__jdch3eo {
-  background-color: var(--colors-yellowBackground__vzi4106);
-  outline: var(--colors-brown__vzi4108) dotted thick;
-}
-.modal_gameSettingValueItem_isSelected_false__jdch3ep {
-  background-color: var(--colors-lightBrown__vzi4107);
-}
-@media screen and (max-width: 600px) {
-  .modal_modalName__jdch3e8 {
-    font-size: 1.5rem;
-  }
-  .modal_button__jdch3eb {
-    font-size: 1rem;
-  }
-  .modal_buttonConfim__jdch3eg {
-    font-size: 1rem;
-  }
-  .modal_gameSettingTitle__jdch3ek {
-    font-size: 1.2rem;
-  }
-  .modal_gameSettingValue__jdch3em {
-    font-size: 1.2rem;
-  }
-  .modal_gameSettingValueItem__jdch3en {
-    padding: 0.25rem 0.5rem;
-  }
+  align-items: center;
+  justify-content: center;
+  color: #837156;
+  font-size: 24px;
+  font-weight: 700;
 }

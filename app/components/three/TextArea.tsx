@@ -1,20 +1,21 @@
 import { useRecoilState } from "recoil";
 import {
   bunnyState,
+  gameSettingState,
   listeningState,
   senarioState,
-  studyLanguageState,
   UserNameState,
 } from "../../recoil/atoms";
 import Image from "next/image";
 import * as css from "./textArea.css";
 import defaultBubble from "@public/images/textbubble_default.png";
 import selectBubble from "@public/images/textbubble_selector.png";
-import { modalState } from "../../recoil/atoms";
 
 import { useEffect, useState } from "react";
-import Modal from "../modal";
-import GameSetting from "../modalContents/gameSetting";
+import { useModal } from "@/app/components/useModal.hook";
+import Modal from "@/app/components/modal";
+import GameSetting from "../modalContents/GameSetting";
+
 const languageList = ["ENGLISH", "GERMAN"];
 
 const TextArea = () => {
@@ -24,8 +25,8 @@ const TextArea = () => {
   const [userName, setUserName] = useRecoilState(UserNameState);
   const [text, setText] = useState("");
   const [userNameInput, setUserNameInput] = useState("");
-  const [language, setLanguage] = useRecoilState(studyLanguageState);
-  const [isOpen, setIsOpen] = useRecoilState(modalState);
+  const [optionState, setOptionState] = useRecoilState(gameSettingState);
+  const { isOpen, openModal, closeModal } = useModal();
 
   useEffect(() => {
     switch (senario) {
@@ -84,16 +85,24 @@ const TextArea = () => {
   };
 
   // select language for puzzle
-  const handleSelectLanguage = (lang: String) => {
-    setLanguage(lang);
-    setIsOpen(true); // show game setting modal
+  const handleSelectLanguage = (lang: string) => {
+    setOptionState({
+      lang: lang,
+      level: "",
+      cnt: "",
+      diff: "",
+    });
+    openModal(); // show game setting modal
   };
-
-  const closeModal = () => setIsOpen(false);
 
   return (
     <>
-      <Modal onClose={closeModal} modalSize="large" modalName="Setting">
+      <Modal
+        modalName="Setting"
+        modalSize="small"
+        closeButton={true}
+        onClose={closeModal}
+      >
         <GameSetting />
       </Modal>
       <div className={css.textArea}>

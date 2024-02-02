@@ -1,4 +1,5 @@
 import {
+  createGlobalTheme,
   createTheme,
   globalFontFace,
   globalStyle,
@@ -12,7 +13,6 @@ export const [themeClass, vars] = createTheme({
     whiteInput: "#F8F6E5",
     primary: "#77D5C2",
     yellow: "#F5CA5F",
-
     yellowBackground: "#FEE8B4",
     lightBrown: "#E5C894",
     brown: "#81353F",
@@ -20,5 +20,6 @@ export const [themeClass, vars] = createTheme({
     textH2: "#887A67",
     textH3: "#F7F6E6",
     textH4: "#565655",
+    textBubble: "#837156",
   },
 });

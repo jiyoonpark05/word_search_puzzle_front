@@ -29,10 +29,10 @@ const Modal = ({
         <div className={css.modalContainer({ size: modalSize })}>
           {closeButton && (
             <div className={css.closeHeader} onClick={onClose}>
+              <div className={css.modalName}>{modalName}</div>
               <Image className={css.crossIcon} src={cross} alt="img" />
             </div>
           )}
-          <div className={css.modalName}>{modalName}</div>
           {children}
         </div>
       </div>

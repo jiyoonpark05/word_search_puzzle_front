@@ -1,0 +1,276 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/theme.css.ts.vanilla.css","source":"LnRoZW1lX3RoZW1lQ2xhc3NfX3Z6aTQxMDAgewogIC0tY29sb3JzLWJsYWNrX192emk0MTAxOiAjMDAwMDAwOwogIC0tY29sb3JzLXdoaXRlX192emk0MTAyOiAjRkZGRkZGOwogIC0tY29sb3JzLXdoaXRlSW5wdXRfX3Z6aTQxMDM6ICNGOEY2RTU7CiAgLS1jb2xvcnMtcHJpbWFyeV9fdnppNDEwNDogIzc3RDVDMjsKICAtLWNvbG9ycy15ZWxsb3dfX3Z6aTQxMDU6ICNGNUNBNUY7CiAgLS1jb2xvcnMteWVsbG93QmFja2dyb3VuZF9fdnppNDEwNjogI0ZFRThCNDsKICAtLWNvbG9ycy1saWdodEJyb3duX192emk0MTA3OiAjRTVDODk0OwogIC0tY29sb3JzLWJyb3duX192emk0MTA4OiAjODEzNTNGOwogIC0tY29sb3JzLXRleHRIMV9fdnppNDEwOTogIzY0NTUzMTsKICAtLWNvbG9ycy10ZXh0SDJfX3Z6aTQxMGE6ICM4ODdBNjc7CiAgLS1jb2xvcnMtdGV4dEgzX192emk0MTBiOiAjRjdGNkU2OwogIC0tY29sb3JzLXRleHRINF9fdnppNDEwYzogIzU2NTY1NTsKICAtLWNvbG9ycy10ZXh0QnViYmxlX192emk0MTBkOiAjODM3MTU2Owp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.theme_themeClass__vzi4100 {
+  --colors-black__vzi4101: #000000;
+  --colors-white__vzi4102: #FFFFFF;
+  --colors-whiteInput__vzi4103: #F8F6E5;
+  --colors-primary__vzi4104: #77D5C2;
+  --colors-yellow__vzi4105: #F5CA5F;
+  --colors-yellowBackground__vzi4106: #FEE8B4;
+  --colors-lightBrown__vzi4107: #E5C894;
+  --colors-brown__vzi4108: #81353F;
+  --colors-textH1__vzi4109: #645531;
+  --colors-textH2__vzi410a: #887A67;
+  --colors-textH3__vzi410b: #F7F6E6;
+  --colors-textH4__vzi410c: #565655;
+  --colors-textBubble__vzi410d: #837156;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/three/textArea.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE5WUyZLbIBCG7/MUXFwVH+RI8q6c4lueIEcXktoWMxgoFm+pefcAMraswXZyUUGj7v74u5uRhqP+KQGvr4v1x7mavfMU/XlDSHBFNOGsQLhUnBoNP6xVc1GgeTpwawobXaDULRsg28Zuxu3JgdS6KVCWuu3n2+gu1cqUJYWQLPPJaqIExacCbSgcv0S4xQ/7d6M02ZySijMNzB5U9gvSHWFKtiwhGnbqZu4ylD7/b4mFABkw8jhGXIQe3A4fk5spFd4TKwGVTiS27tY++758yv0YUJ8ErGvYYEN1oB17Wpc3CLPsKx0JooBapBBj8q8xgsPUO7woTEeLZStFN2BL0JN+9qTd5KWtBtfeS7K7FptL2PlC4bombFughTiiLG9rUHJZg7Q1qImxzZBfSlPi6mMruWG1rQPlskB7LL8l7UYlJ6CUH1bXn9br/ZlMsnQ2vL8MF45XhWvM22sEjskALVpq+3/imzJe7X6YouF7kD5YZaRyeIKT0N039h51KfmBBdTF0P3LBa6IPl3nNXbZQ2MnJbjlw4hq6WjqNe6PcQBevHotxtPOa5E9Rum+DS1P7Xk2dlYSRc5gvSMshAnTe1OW8WGOzulDQb0yv1zwgDOOyZP1G9AZrtYdlltiRclyZ8VG8wh8wMaxAevyaYmZEljaLrqR2Aq1N+FGU8KsSowz6M8dq1dGa85CrrKba3KhDcOcX/YPOuF/uvAFxbNm//wL53CnC6IGAAA="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.textArea_textArea__kzc6jo0 {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  height: 30%;
+  width: 100%;
+}
+.textArea_textBubble__kzc6jo1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.textArea_bubbleWrapper__kzc6jo2 {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16/9;
+  justify-content: center;
+}
+.textArea_bubbleWrapper_type_default__kzc6jo3 {
+  max-height: 90%;
+}
+.textArea_bubbleWrapper_type_select__kzc6jo4 {
+  max-height: 90%;
+}
+.textArea_bubble__kzc6jo5 {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+}
+.textArea_selectWrapper__kzc6jo6 {
+  position: absolute;
+  right: 3%;
+  top: -10%;
+  width: 7rem;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background-color: var(--colors-yellowBackground__vzi4106);
+}
+.textArea_options__kzc6jo7 {
+  padding: 4% 8%;
+  text-align: center;
+}
+.textArea_options__kzc6jo7:hover {
+  cursor: pointer;
+  background: var(--colors-brown__vzi4108);
+  opacity: 70%;
+  color: var(--colors-white__vzi4102);
+  border-radius: 0.5rem;
+}
+.textArea_text__kzc6jo8 {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  color: var(--colors-textBubble__vzi410d);
+  font-size: 1.5rem;
+}
+.textArea_inputBubble__kzc6jo9 {
+  display: flex;
+  max-width: 1000px;
+  background: var(--colors-whiteInput__vzi4103);
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  margin: 12rem auto;
+}
+.textArea_input__kzc6joa {
+  width: 100%;
+  background: transparent;
+  border: 0px;
+  outline: none;
+}
+.textArea_sendButton__kzc6job {
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: var(--colors-brown__vzi4108);
+}
+.textArea_sendButton__kzc6job:hover {
+  cursor: pointer;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modal.css.ts.vanilla.css","source":"#H4sIAAAAAAAAE61UTW+jMBS891dYqiq1BxCQhKT0sh+X9rKnlfYYGfsR3AUb2SZJs+p/X2MwgYRkc1hFQrHhzcybN7ZfCoqLtX1+w+T3Roqa0/X6nZJ8BgH6c4dQJRTTTPAE4VSJotbwYnYPHuMU9gmKgma5Y1TnCQqD4KFZ5sA2uT6utagSZD9MexaPiELIBG2xfPTahfLSwrxfr7cHNg+D8KmpEBUmTH8kaNFgfd75A82/JK4qkE5weEXwiULKVFVgg5oVsG823mulWfZhhHAN3Ggn5gly1Oss6JuZn4v5biox40c5USsHU8r4xlBLKE8eY0dOvNjlTMMbr2rtDJlZQ1IhKUhPYspqZWz1FxapF0MKoeAVMD0qia2Sf/esjNfgpaB3APxlJN5fPHQTHNNH82qPAvNr/gxVSKHUm0F2GpZWgxtDJ3oQlX6H1FI1wagEaycwtvkHLsFhrizmVJA07PVr6Ix7tsZlpk1PsQMY1R2X3dp1ElJR0CEbKIU3Pdez5WpwPVywDR8mpFNwv5otw0U8MM5rk386orTWWvCvErBDxzdOaMRZl9zb4CrpszRiDadZf5oOHGt67IkCERK354YLDmd1roYM55gx7bSN4hL40WIU8unMjmYS+m4qUwO1p8HNM3q6LC/JxRZkG4yLSepq9EcFa4I5gcLVU1t5fk3d02y1iCZssRi5OIYSLiEEhMRpfAvCoIcJnHBJYzK7CSeFTEgYTiwKgmo/PHjtxjA9sn0R+LOp/HSmCZ4xWTqm7JLWOKZRvLwR5Hrb8Yqu4tWtUP+n8y8lUIaRItJciAhzih5LvPc6xLgBeLIc12+ok5y78H8eC6fO2Liqr/n8C02WSBW2BwAA"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.modal_modalBackground__jdch3e0 {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--colors-black__vzi4101);
+  opacity: 50%;
+}
+.modal_modalWrapper__jdch3e1 {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 30;
+  top: 40%;
+}
+.modal_modalContainer__jdch3e2 {
+  padding: 1rem 1rem 1rem 1rem;
+  background: var(--colors-whiteInput__vzi4103);
+  border-radius: 0.5rem;
+}
+.modal_closeHeader__jdch3e6 {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5% 0;
+  border-radius: 24px 0 0 24px;
+}
+.modal_crossIcon__jdch3e7 {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+.modal_modalName__jdch3e8 {
+  color: var(--colors-textH1__vzi4109);
+  font-size: 2rem;
+  font-weight: bold;
+}
+.modal_message__jdch3e9 {
+  text-align: center;
+  color: #837156;
+  padding-top: 0.5rem;
+}
+.modal_buttonArea__jdch3ea {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding-top: 1.5rem;
+}
+.modal_buttonText__jdch3eb {
+  text-decoration: none;
+}
+.modal_button__jdch3ec {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--colors-white__vzi4102);
+}
+.modal_button__jdch3ec:hover {
+  cursor: pointer;
+}
+.modal_button_type_cancel__jdch3ed {
+  background-color: #df852e;
+}
+.modal_button_type_home__jdch3ee {
+  background-color: #0cc6b6;
+}
+.modal_button_type_home__jdch3ee:hover {
+  background-color: #17d6c3;
+}
+.modal_button_type_home__jdch3ee:before {
+  width: 200px;
+  height: 200px;;
+  padding-right: 0.3rem;
+}
+.modal_button_type_confirm__jdch3ef {
+  background-color: #66d267;
+}
+.modal_button_type_confirm__jdch3ef:hover {
+  background-color: #68d868;
+}
+.modal_button_type_confirm__jdch3ef:before {
+  width: 200px;
+  height: 200px;;
+  padding-right: 0.3rem;
+}
+@media screen and (max-width: 600px) {
+  .modal_modalName__jdch3e8 {
+    font-size: 1.5rem;
+  }
+  .modal_button__jdch3ec {
+    font-size: 1rem;
+  }
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/components/modalContents/gameSetting.css.tsx.vanilla.css","source":"#H4sIAAAAAAAAE6WUwVLCMBCG7zxFLs7YQ5gWBaFeHE968qCjx05o1rJDmnSSFBCHdzetbalYUODUZJvs/+3mT/oJS+EZrEWZRO1xFMQTs1ykAfnsEcLRZIJ9hORdwOrWBVKUdInczkISjDWkRSxWIk8lTVjmgv5FEcoY5y6bm7s1xO8Py6WbXn9X9imzqGSjOuhS3bttl/mqm5kJTCRFC6kJSQzSgv6FvY+vGr+gFdDoXHfrFF/KUUNcwIWVQPFHq2WlU3WiVFc6JAumLyktJ4ZaWNmHIIoWa7wO/IlXJlXSUoNr2G7ej/nKRA5vmmUZ6IZ2eDptxXo8QyM+6hZv997/uyeDuifsxJ48usNvmG5Kpsai3/pNsVOlOWiqGcfchIe8u18gnKkF6FImzrUpisoU1sabsnieaJVLTrsq/gAh1PK+WVTXPvLOxEPzDMIdN/DI6tYZjUvQs6hUbgVK2NkzdU6S9cKxR7iyTpzYGcbzo5HfmTBb5sl/mN29n9n7NsSNV+jepcCRERNrAEmY5OQyZav6XRv5frbyyvzHPAc7thxUdtocSNN1VU5N0+HwHx4fDNsvcZFw8wXBqHsJBAYAAA=="}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.gameSetting_gameSetting__1c9swvm1 {
+  display: flex;
+  min-width: 18rem;
+  -moz-column-gap: 10%;
+       column-gap: 10%;
+  padding: 1rem 0.5rem;
+}
+.gameSetting_gameOption__1c9swvm2 {
+  display: flex;
+}
+.gameSetting_gameOptionSetting__1c9swvm3 {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.gameSetting_gameSettingTitle__1c9swvm4 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  color: var(--colors-textH1__vzi4109);
+  font-size: 1.5rem;
+}
+.gameSetting_gameSettingValueWrapper__1c9swvm5 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-size: 1.5rem;
+}
+.gameSetting_gameSettingValue__1c9swvm6 {
+  display: flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  color: var(--colors-textH2__vzi410a);
+  font-size: 1.5rem;
+}
+.gameSetting_gameSettingValueItem__1c9swvm7 {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.gameSetting_gameSettingValueItem__1c9swvm7:hover {
+  cursor: pointer;
+  background-color: var(--colors-yellowBackground__vzi4106);
+  border-radius: 0.5rem;
+}
+.gameSetting_gameSettingValueItem_isSelected_true__1c9swvm8 {
+  background-color: var(--colors-yellowBackground__vzi4106);
+  outline: var(--colors-brown__vzi4108) dotted thick;
+}
+.gameSetting_gameSettingValueItem_isSelected_false__1c9swvm9 {
+  background-color: var(--colors-lightBrown__vzi4107);
+}
+@media screen and (max-width: 600px) {
+  .gameSetting_gameSettingTitle__1c9swvm4 {
+    font-size: 1.2rem;
+  }
+  .gameSetting_gameSettingValue__1c9swvm6 {
+    font-size: 1.2rem;
+  }
+  .gameSetting_gameSettingValueItem__1c9swvm7 {
+    padding: 0.25rem 0.5rem;
+  }
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[1]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[6].oneOf[0].use[2]!./node_modules/@vanilla-extract/webpack-plugin/virtualFileLoader/dist/vanilla-extract-webpack-plugin-virtualFileLoader.cjs.js?{"fileName":"app/page.css.ts.vanilla.css","source":"LnBhZ2Vfd3JhcHBlcl9fbGxjNG4wMCB7CiAgaGVpZ2h0OiAxMDAlOwp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted.js ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_wrapper__llc4n00 {
+  height: 100%;
+}

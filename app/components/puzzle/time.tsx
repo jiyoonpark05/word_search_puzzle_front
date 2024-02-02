@@ -1,14 +1,25 @@
+import { gameResultState } from "@/app/recoil/atoms";
 import { useEffect, useState } from "react";
+import { useSetRecoilState } from "recoil";
+import { formatTime } from "../common/util";
+import { TimerProps } from "./puzzle.types";
 import * as css from "./time.css";
 
-const Time = ({ initialDuration, onFinish, isComplete, onClear }) => {
+const Time = ({
+  isStart,
+  initialDuration,
+  onFinish,
+  isComplete,
+  onClear,
+}: TimerProps) => {
   const [duration, setDuration] = useState(initialDuration);
   const [timmerFinished, setTimerFinished] = useState(false);
+  const setGameResult = useSetRecoilState(gameResultState);
 
   useEffect(() => {
-    let timerId;
+    let timerId: string | number | NodeJS.Timer | undefined;
 
-    if (duration > 0 && !timmerFinished) {
+    if (isStart && duration > 0 && !timmerFinished) {
       timerId = setInterval(() => {
         setDuration((prevDuration: number) => prevDuration - 1);
       }, 1000);
@@ -21,21 +32,14 @@ const Time = ({ initialDuration, onFinish, isComplete, onClear }) => {
     return () => clearInterval(timerId);
   }, [duration, onFinish, timmerFinished]);
 
-  const formatTime = (timeInSeconds: number) => {
-    const minutes = Math.floor(timeInSeconds / 60);
-    const seconds = timeInSeconds % 60;
-
-    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(
-      2,
-      "0"
-    )}`;
-  };
   const calculateProgress = () => {
     return (1 - duration / initialDuration) * 100;
   };
 
+  // stopping timer and Record play result
   const handleStopTimer = () => {
     setTimerFinished(true);
+    setGameResult({ result: "P", time: duration });
     onClear();
   };
 
@@ -48,12 +52,12 @@ const Time = ({ initialDuration, onFinish, isComplete, onClear }) => {
           value={calculateProgress()}
           max="100"
         ></progress>
+        {duration > 0 && isComplete && (
+          <div className={css.buttonComplete} onClick={handleStopTimer}>
+            GAME CLEAR
+          </div>
+        )}
       </div>
-      {duration > 0 && isComplete && (
-        <div className={css.buttonComplete} onClick={handleStopTimer}>
-          GAME CLEAR
-        </div>
-      )}
     </>
   );
 };

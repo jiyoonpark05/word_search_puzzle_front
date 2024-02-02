@@ -1,6 +1,7 @@
 import { style } from "@vanilla-extract/css";
 import { recipe } from "@vanilla-extract/recipes";
 import { vars } from "../theme.css";
+import cross from "../../public/icons/cross.png";
 
 export const modalBackground = style({
   position: "absolute",
@@ -23,7 +24,7 @@ export const modalWrapper = style({
 
 export const modalContainer = recipe({
   base: {
-    padding: "1rem 2rem",
+    padding: "1rem 1rem 1rem 1rem",
     background: vars.colors.whiteInput,
     borderRadius: "0.5rem",
   },
@@ -38,7 +39,7 @@ export const modalContainer = recipe({
 
 export const closeHeader = style({
   display: "flex",
-  justifyContent: "right",
+  justifyContent: "space-between",
   padding: "1.5% 0",
   borderRadius: "24px 0 0 24px",
 });
@@ -61,7 +62,11 @@ export const modalName = style({
   },
 });
 
-export const message = style({});
+export const message = style({
+  textAlign: "center",
+  color: "#837156",
+  paddingTop: "0.5rem",
+});
 
 export const buttonArea = style({
   display: "flex",
@@ -70,13 +75,16 @@ export const buttonArea = style({
   paddingTop: "1.5rem",
 });
 
+export const buttonText = style({
+  textDecoration: "none",
+});
+
 export const button = recipe({
   base: {
     width: "fit-content",
     padding: "0.25rem 1rem",
     borderRadius: "0.5rem",
     fontSize: "1.2rem",
-
     color: vars.colors.white,
 
     ":hover": {
@@ -91,119 +99,37 @@ export const button = recipe({
   },
   variants: {
     type: {
-      confirm: {},
       cancel: {
         backgroundColor: "#df852e",
       },
       home: {
         backgroundColor: "#0cc6b6",
+
+        ":hover": {
+          backgroundColor: "#17d6c3",
+        },
+
         ":before": {
-          content: "-",
+          // content: "url(icons/cross.png)",
           width: "200px",
           height: "200px;",
           paddingRight: "0.3rem",
         },
       },
-      result: {
+      confirm: {
         backgroundColor: "#66d267",
+
+        ":hover": {
+          backgroundColor: "#68d868",
+        },
+
+        ":before": {
+          // content: "url(icons/cross.png)",
+          width: "200px",
+          height: "200px;",
+          paddingRight: "0.3rem",
+        },
       },
-    },
-  },
-});
-
-export const buttonConfim = style({
-  width: "fit-content",
-  padding: "0.25rem 1rem",
-  borderRadius: "0.5rem",
-  fontSize: "1.2rem",
-  backgroundColor: vars.colors.brown,
-  color: vars.colors.white,
-
-  ":hover": {
-    cursor: "pointer",
-  },
-
-  "@media": {
-    "screen and (max-width: 600px)": {
-      fontSize: "1rem",
-    },
-  },
-});
-
-export const gameSetting = style({
-  display: "flex",
-  minWidth: "18rem",
-  columnGap: "10%",
-  padding: "1rem 0.5rem",
-});
-
-export const gameOption = style({
-  display: "flex",
-});
-
-export const gameOptionSetting = style({
-  display: "flex",
-  alignItems: "center",
-  columnGap: "1rem",
-});
-
-export const gameSettingTitle = style({
-  display: "flex",
-  flexDirection: "column",
-  rowGap: "1.5rem",
-  color: vars.colors.textH1,
-  fontSize: "1.5rem",
-  "@media": {
-    "screen and (max-width: 600px)": {
-      fontSize: "1.2rem",
-    },
-  },
-});
-
-export const gameSettingValueWrapper = style({
-  display: "flex",
-  flexDirection: "column",
-  rowGap: "1rem",
-  fontSize: "1.5rem",
-});
-
-export const gameSettingValue = style({
-  display: "flex",
-  columnGap: "0.5rem",
-  color: vars.colors.textH2,
-  fontSize: "1.5rem",
-
-  "@media": {
-    "screen and (max-width: 600px)": {
-      fontSize: "1.2rem",
-    },
-  },
-});
-
-export const gameSettingValueItem = recipe({
-  base: {
-    padding: "0.5rem 1rem",
-    borderRadius: "0.5rem",
-
-    ":hover": {
-      cursor: "pointer",
-      backgroundColor: vars.colors.yellowBackground,
-      borderRadius: "0.5rem",
-    },
-
-    "@media": {
-      "screen and (max-width: 600px)": {
-        padding: "0.25rem 0.5rem",
-      },
-    },
-  },
-  variants: {
-    isSelected: {
-      true: {
-        backgroundColor: vars.colors.yellowBackground,
-        outline: `${vars.colors.brown} dotted thick`,
-      },
-      false: { backgroundColor: vars.colors.lightBrown },
     },
   },
 });

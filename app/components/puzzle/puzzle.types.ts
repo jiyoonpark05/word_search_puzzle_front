@@ -1,16 +1,12 @@
-export interface Student {
-  ranking: number;
-}
-
 export interface Path {
   x: number;
   y: number;
 }
 
-export type Coordinate = {
+export interface Coordinate {
   x: number;
   y: number;
-};
+}
 
 export interface Word {
   origin_word: string;
@@ -30,16 +26,9 @@ export interface puzzleModel {
   puzzle: Array<string[]>;
 }
 
-export type SizeProps = {
-  windowWidth: number;
-};
+export type windowWidth = number;
 
-export type TimeProps = {
-  isComplete: boolean;
-  handleTimerFinish: () => void;
-};
-
-export type BoardProps = {
+export interface BoardProps {
   words: Array<string[]>;
   answers: Word[];
   foundAnswers: Word[];
@@ -52,7 +41,7 @@ export type BoardProps = {
   handleTimerFinish: () => void;
   setWordBoard: (wordSearch: puzzleModel) => void;
   setFoundAnswer: (words: Word[]) => void;
-};
+}
 
 export interface puzzleProps {
   wordBoardProps: BoardProps;
@@ -62,12 +51,31 @@ export interface puzzleProps {
   setFoundAnswer: (words: Word[]) => void;
 }
 
-export type highlightType = {
+export interface HighlightType {
   parent: HTMLDivElement | null;
   start: Coordinate | null;
   end: Coordinate | null;
   color: string;
-};
+}
+
+// Timer
+export interface TimerProps {
+  isStart: boolean;
+  initialDuration: number;
+  isComplete: boolean;
+  onFinish: () => void;
+  onClear: () => void;
+}
+
+// Sidebar
+export interface SidebarProps {
+  answers: BoardProps["answers"];
+  foundAnswers: BoardProps["foundAnswers"];
+  handleGameClear: BoardProps["handleGameClear"];
+  isComplete: TimerProps["isComplete"];
+  handleTimerFinish: () => void | null;
+  windowWidth: windowWidth;
+}
 
 // opacity 0.4
 export const HIGHLIGHT_COLOR = [

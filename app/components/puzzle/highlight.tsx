@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { highlightType } from "./puzzle.types";
+import { HighlightType } from "./puzzle.types";
 import styled from "styled-components";
 
-const Highlight = ({ ...props }: highlightType) => {
+const Highlight = ({ ...props }: HighlightType) => {
   const { parent, start: startElement, end: endElement, color } = props;
   const [size, setSize] = useState<number>();
 
@@ -24,15 +24,12 @@ const Highlight = ({ ...props }: highlightType) => {
     x: number | undefined,
     y: number | undefined
   ) => {
-    console.log("get element--------");
-    console.log(x, y, root);
     if (x === null || y === null) {
       return null;
     }
     const element = root.getElementsByClassName(
       `${x}-${y}`
     )[0] as HTMLDivElement;
-    console.log(element);
     return element;
   };
 
@@ -89,7 +86,7 @@ const Highlight = ({ ...props }: highlightType) => {
 
       const styleProps = generateHighlightStyle(start, end, angle, color);
 
-      return <Line {...styleProps} />;
+      return <Line {...styleProps} key={styleProps.key} />;
     }
     return null;
   };

@@ -81,11 +81,18 @@ const Puzzle = ({ ...props }: BoardProps) => {
 
 const Container = styled.div`
   position: relative;
+  grid-row: 1 / span 3;
+  width: 100%;
+  max-width: 50vw;
   flex-basis: 50%;
   aspect-ratio: auto 1/1;
-  width: 100%;
   border-radius: 12px;
   background-color: white;
+
+  @media only screen and (max-width: 1000px) {
+    grid-row: 2 / span 1;
+    max-width: 100%;
+  }
 `;
 
 const Grid = styled.div<{ column: number; row: number }>`

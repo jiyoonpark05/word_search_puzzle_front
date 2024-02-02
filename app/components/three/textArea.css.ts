@@ -48,6 +48,7 @@ export const bubble = style({
 export const selectWrapper = style({
   position: "absolute",
   right: "3%",
+  top: "-10%",
   width: "7rem",
   padding: "8px 12px",
   borderRadius: "20px",
@@ -68,8 +69,10 @@ export const options = style({
 
 export const text = style({
   position: "absolute",
-  top: "50%",
-  left: "25%",
+  top: "35%",
+  left: "10%",
+  color: vars.colors.textBubble,
+  fontSize: "1.5rem",
 });
 
 export const inputBubble = style({

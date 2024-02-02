@@ -1,18 +1,10 @@
 "use client";
-import {
-  Center,
-  Environment,
-  Loader,
-  PerspectiveCamera,
-  useScroll,
-  useTexture,
-} from "@react-three/drei";
+import { Environment, Loader } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState } from "react";
-import { useRecoilState } from "recoil";
+import { Suspense } from "react";
 import { Background } from "./Background";
 import { Bunny } from "./Bunny";
-import { bunnyState, modalState } from "../../recoil/atoms";
+import { bunnyState } from "../../recoil/atoms";
 import TextArea from "./TextArea";
 
 const ThreeCanvas = () => {

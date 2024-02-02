@@ -40,11 +40,6 @@ export const senarioState = atom<any>({
   default: 0,
 });
 
-export const studyLanguageState = atom<any>({
-  key: "languageState",
-  default: 0,
-});
-
 export const modalState = atom({
   key: "modalState",
   default: false,
@@ -52,5 +47,10 @@ export const modalState = atom({
 
 export const gameSettingState = atom({
   key: "gameSettingState",
-  default: { level: "", cnt: "", diff: "" },
+  default: { lang: "", level: "", cnt: "", diff: "" },
+});
+
+export const gameResultState = atom({
+  key: "gameResultState",
+  default: { result: "", time: 0 },
 });
