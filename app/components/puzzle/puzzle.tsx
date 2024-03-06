@@ -16,6 +16,7 @@ const Puzzle = ({ ...props }: BoardProps) => {
     handleFinished,
   } = props;
 
+  console.log(words);
   let rowCount = words.length;
   let columnCount = words[0].length;
   const gridRef = useRef<HTMLDivElement>(null);

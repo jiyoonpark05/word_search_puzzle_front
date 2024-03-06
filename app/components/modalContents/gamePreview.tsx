@@ -1,18 +1,24 @@
 import * as common from "../modal.css";
 
 interface gamePreviewProps {
-  words: [string];
+  words: string[];
   handleClickGameStart: any;
 }
 
 const GamePreview = ({ words, handleClickGameStart }: gamePreviewProps) => {
-  console.log(words);
   return (
     <div>
       <div className={common.message}>you need to find this words</div>
-      <div>
+      <div className={common.wordGrid}>
         {words.map((word: string) => {
-          return <div key={word}>{word}</div>;
+          return (
+            <>
+              <div className={common.word} key={word.word}>
+                - {word.word}
+              </div>
+              <div key={word}>뜻이어</div>
+            </>
+          );
         })}
       </div>
       <div className={common.buttonArea}>

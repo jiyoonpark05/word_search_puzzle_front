@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Coordinate, Word, BoardProps, puzzleModel } from "./puzzle.types";
 
 const parseData = (wordSearch: puzzleModel) => {
+  console.log(wordSearch);
   if (!wordSearch) {
     return {
       words: [],
@@ -10,7 +11,7 @@ const parseData = (wordSearch: puzzleModel) => {
   }
 
   return {
-    words: [...wordSearch.puzzle],
+    words: [...wordSearch.grid],
     answers: [...wordSearch.words],
   };
 };
@@ -153,7 +154,7 @@ const useBoard = (wordSearch: puzzleModel, callbacks: WordBoardCallback) => {
     setMove(null);
   };
 
-  return {
+  return ({
     words,
     answers,
     foundAnswers,
@@ -164,6 +165,6 @@ const useBoard = (wordSearch: puzzleModel, callbacks: WordBoardCallback) => {
     handleFinished,
     setWordBoard,
     setFoundAnswer,
-  } as BoardProps;
+  } as unknown) as BoardProps;
 };
 export default useBoard;

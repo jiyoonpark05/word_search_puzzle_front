@@ -68,6 +68,18 @@ export const message = style({
   paddingTop: "0.5rem",
 });
 
+export const wordGrid = style({
+  display: "grid",
+  gridTemplateColumns: "repeat(2,1fr)",
+  padding: "8px",
+  border: "1px solid #7e725c",
+  marginTop: "10px",
+});
+
+export const word = style({
+  // color: "#835a2a",
+});
+
 export const buttonArea = style({
   display: "flex",
   justifyContent: "center",

@@ -16,7 +16,10 @@ import { useModal } from "@/app/components/useModal.hook";
 import Modal from "@/app/components/modal";
 import GameSetting from "../modalContents/GameSetting";
 
-const languageList = ["ENGLISH", "GERMAN"];
+const languageList = [
+  { title: "ENGLISH", value: "en" },
+  { title: "GERMAN", value: "de" },
+];
 
 const TextArea = () => {
   const [state, setState] = useRecoilState(listeningState);
@@ -89,7 +92,7 @@ const TextArea = () => {
     setOptionState({
       lang: lang,
       level: "",
-      cnt: "",
+      cnt: 0,
       diff: "",
     });
     openModal(); // show game setting modal
@@ -137,9 +140,9 @@ const TextArea = () => {
                   return (
                     <div
                       className={css.options}
-                      onClick={(e) => handleSelectLanguage(lang)}
+                      onClick={(e) => handleSelectLanguage(lang.value)}
                     >
-                      {lang}
+                      {lang.title}
                     </div>
                   );
                 })}

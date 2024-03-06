@@ -15,6 +15,7 @@ export interface Word {
 }
 
 export interface puzzleModel {
+  // grid: any;
   id: string;
   color_code: string;
   attempt_count: number;
@@ -23,7 +24,7 @@ export interface puzzleModel {
   start_date: null;
   end_date: null;
   words: Word[];
-  puzzle: Array<string[]>;
+  grid: Array<string[]>;
 }
 
 export type windowWidth = number;

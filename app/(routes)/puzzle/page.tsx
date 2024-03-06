@@ -4,45 +4,58 @@ import Puzzle from "../../components/puzzle/puzzle";
 import { puzzleModel } from "@/app/components/puzzle/puzzle.types";
 import useBoard from "@/app/components/puzzle/useBoard.hook";
 import { useModal } from "@/app/components/useModal.hook";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useCallback, useEffect, useState } from "react";
 import Modal from "@/app/components/modal";
 import Time from "@/app/components/puzzle/time";
 import GameResult from "@/app/components/modalContents/gameResult";
 import GamePreview from "@/app/components/modalContents/gamePreview";
-
+import getPuzzle from "@/app/lib/get-puzzle";
+import { gameSettingState } from "@/app/recoil/atoms";
+import { useRecoilValue } from "recoil";
 interface PuzzleProps {
   puzzle: puzzleModel;
 }
 
-export default function PlayPuzzle({ puzzle }: PuzzleProps) {
+const PlayPuzzle = () => {
   const { isOpen, openModal, closeModal } = useModal();
   const [modalChild, setModalChild] = useState<ReactNode | null>(null);
-  const [size, setSize] = useState<number>(window.innerWidth);
+  // const [size, setSize] = useState(window.innerWidth);
   const [gameStart, setGameStart] = useState(false);
-  const DUMMY_WORDS = ["ORM", "PROGRAM", "WORLD"];
+  const [puzzle, setPuzzle] = useState<puzzleModel | null>(null);
+  const [board, setBoard] = useState();
+  const optionState = useRecoilValue(gameSettingState);
 
   // open game information modal before play
-  useEffect(() => {
+  const fetchData = useCallback(async () => {
+    const fetchedPuzzle = await getPuzzle(optionState);
+    setPuzzle(fetchedPuzzle);
     const element = (
       <GamePreview
-        words={DUMMY_WORDS}
-        handleClickGameStart={(e: React.MouseEvent) => setGameStart(true)}
+        words={fetchedPuzzle.data.words} // use fetched data
+        handleClickGameStart={(e: React.MouseEvent) => {
+          closeModal();
+          setGameStart(true);
+        }}
       />
     );
+    console.log(fetchedPuzzle);
     setModalChild(element);
-    openModal();
-  }, []);
+  }, [setPuzzle]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   // arrange the elements depends on the window width
-  useEffect(() => {
-    const resizeListener = () => {
-      setSize(window.innerWidth);
-    };
-    window.addEventListener("resize", resizeListener);
-    return () => {
-      window.removeEventListener("resize", resizeListener);
-    };
-  }, [size]);
+  // useEffect(() => {
+  //   const resizeListener = () => {
+  //     setSize(window.innerWidth);
+  //   };
+  //   window.addEventListener("resize", resizeListener);
+  //   return () => {
+  //     window.removeEventListener("resize", resizeListener);
+  //   };
+  // }, [size]);
 
   const puzzleModel = {
     id: "hello",
@@ -98,8 +111,6 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
     ],
   };
 
-  const boardProps = useBoard(puzzleModel, {});
-
   const handleTimerFinish = () => {
     setGameStart(false);
     const element = <GameResult result="F" />;
@@ -113,36 +124,34 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
     setModalChild(element);
     openModal();
   };
+  // const isComplete = board.answers.length === board.foundAnswers.length;
 
-  const isComplete =
-    boardProps.answers.length === boardProps.foundAnswers.length;
+  // const answerArray = new Set(board.foundAnswers.map((item) => item.word));
 
-  const answerArray = new Set(boardProps.foundAnswers.map((item) => item.word));
-
-  const wordList = boardProps.answers.map((el) => {
-    // check if the word already found or not
-    return (
-      <div
-        key={el.word}
-        className={answerArray.has(el.word) ? css.wordFound : css.word}
-      >
-        {el.word}
-      </div>
-    );
-  });
+  // const wordList = board.answers.map((el) => {
+  //   // check if the word already found or not
+  //   return (
+  //     <div
+  //       key={el.word}
+  //       className={answerArray.has(el.word) ? css.wordFound : css.word}
+  //     >
+  //       {el.word}
+  //     </div>
+  //   );
+  // });
 
   return (
     <>
-      <Modal
+      {/* <Modal
         modalName=""
         modalSize="small"
         closeButton={false}
         onClose={closeModal}
       >
         {modalChild}
-      </Modal>
+      </Modal> */}
       <div className={css.playWrapper}>
-        <Puzzle {...boardProps} />
+        {/* <Puzzle {...board} />
         <Time
           isStart={gameStart}
           initialDuration={60}
@@ -153,8 +162,10 @@ export default function PlayPuzzle({ puzzle }: PuzzleProps) {
         <div>
           <div className={css.wordListTitle}>Word List</div>
           <div className={css.wordListWrapper}>{wordList}</div>
-        </div>
+        </div> */}
       </div>
     </>
   );
-}
+};
+
+export default PlayPuzzle;

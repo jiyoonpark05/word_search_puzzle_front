@@ -47,7 +47,7 @@ export const modalState = atom({
 
 export const gameSettingState = atom({
   key: "gameSettingState",
-  default: { lang: "", level: "", cnt: "", diff: "" },
+  default: { lang: "", level: "", cnt: 0, diff: "" },
 });
 
 export const gameResultState = atom({
