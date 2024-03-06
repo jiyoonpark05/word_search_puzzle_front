@@ -1,49 +1,47 @@
-import { useEffect, useMemo, useState } from "react";
+import getPuzzle from "@/app/lib/get-puzzle";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Coordinate, Word, BoardProps, puzzleModel } from "./puzzle.types";
-
-const parseData = (wordSearch: puzzleModel) => {
-  console.log(wordSearch);
-  if (!wordSearch) {
-    return {
-      words: [],
-      answers: [],
-    };
-  }
-
-  return {
-    words: [...wordSearch.grid],
-    answers: [...wordSearch.words],
-  };
-};
 
 type WordBoardCallback = {
   onComplete?: () => void;
   onMatch?: (matchedWord: Word) => void;
 };
 
-const useBoard = (wordSearch: puzzleModel, callbacks: WordBoardCallback) => {
-  const initData = useMemo(() => {
-    return parseData(wordSearch);
-  }, [wordSearch]);
+const useBoard = (optionStates: any, callbacks: WordBoardCallback) => {
+  const [puzzle, setPuzzle] = useState<puzzleModel | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const [words, setWords] = useState<Array<string[]>>(initData.words);
-  const [answers, setAnswers] = useState<Word[]>(initData.answers);
+  const [words, setWords] = useState<Array<string[][]>>([]);
+  const [answers, setAnswers] = useState<Word[]>([]);
+
   const [foundAnswers, setFoundAnswers] = useState<Word[]>([]);
   const [start, setStart] = useState<Coordinate | null>(null);
   const [move, setMove] = useState<Coordinate | null>(null);
+
+  const fetchPuzzleData = async () => {
+    try {
+      setIsLoading(true);
+      const puzzle = await getPuzzle(optionStates);
+      setPuzzle(puzzle);
+      setWords(puzzle.data.grid);
+      setAnswers(puzzle.data.words);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchPuzzleData();
+  }, [optionStates]);
 
   useEffect(() => {
     if (foundAnswers.length === answers.length) {
       callbacks?.onComplete?.();
     }
-  }, [foundAnswers, answers]);
-
-  const setWordBoard = (wordSearchData: puzzleModel) => {
-    const data = parseData(wordSearchData);
-    setWords(data.words);
-    setAnswers(data.answers);
-    setFoundAnswers([]);
-  };
+  }, [foundAnswers]);
 
   const setFoundAnswer = (foundAnswer: Word[]) => {
     setFoundAnswers([...foundAnswer]);
@@ -163,7 +161,7 @@ const useBoard = (wordSearch: puzzleModel, callbacks: WordBoardCallback) => {
     handleStart,
     handleMove,
     handleFinished,
-    setWordBoard,
+    // setWordBoard,
     setFoundAnswer,
   } as unknown) as BoardProps;
 };

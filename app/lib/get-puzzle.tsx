@@ -1,6 +1,5 @@
-import { useRecoilValue } from "recoil";
-import { gameSettingState } from "../recoil/atoms";
 import { API } from "config";
+
 type Word = {
   lang: string;
   level: string;
