@@ -65,19 +65,34 @@ export const modalName = style({
 export const message = style({
   textAlign: "center",
   color: "#837156",
-  paddingTop: "0.5rem",
+  padding: "0.5rem 0 ",
 });
 
-export const wordGrid = style({
+// word list Modal
+
+export const wordContainer = style({
   display: "grid",
-  gridTemplateColumns: "repeat(2,1fr)",
-  padding: "8px",
-  border: "1px solid #7e725c",
-  marginTop: "10px",
+  gridTemplateColumns: "1fr 1fr 2fr 1fr 2fr",
+  justifyItems: "center",
+  columnGap: "0.3rem",
+  rowGap: "0.1rem",
+});
+export const wordGridHeader = style({
+  display: "flex",
+  width: "100%",
+  justifyContent: "center",
+  padding: "0.3rem 0.1rem",
+  color: vars.colors.white,
+  backgroundColor: vars.colors.yellow,
 });
 
 export const word = style({
   // color: "#835a2a",
+  display: "flex",
+  width: "100%",
+  justifyContent: "center",
+  padding: "0.3rem 0.1rem",
+  backgroundColor: vars.colors.yellowBackground,
 });
 
 export const buttonArea = style({

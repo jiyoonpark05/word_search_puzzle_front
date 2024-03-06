@@ -1,6 +1,6 @@
 import getPuzzle from "@/app/lib/get-puzzle";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Coordinate, Word, BoardProps, puzzleModel } from "./puzzle.types";
+import { useEffect, useState } from "react";
+import { Coordinate, Word, BoardProps } from "./puzzle.types";
 
 type WordBoardCallback = {
   onComplete?: () => void;
@@ -8,12 +8,12 @@ type WordBoardCallback = {
 };
 
 const useBoard = (optionStates: any, callbacks: WordBoardCallback) => {
-  const [puzzle, setPuzzle] = useState<puzzleModel | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [words, setWords] = useState<Array<string[][]>>([]);
-  const [answers, setAnswers] = useState<Word[]>([]);
+  const [grid, setGrid] = useState<Array<string[][]>>([]);
+  const [answers, setAnswers] = useState<Word[]>([]); // word with path on Grid
+  const [words, setWords] = useState<Word[]>([]); // word with details
 
   const [foundAnswers, setFoundAnswers] = useState<Word[]>([]);
   const [start, setStart] = useState<Coordinate | null>(null);
@@ -23,9 +23,9 @@ const useBoard = (optionStates: any, callbacks: WordBoardCallback) => {
     try {
       setIsLoading(true);
       const puzzle = await getPuzzle(optionStates);
-      setPuzzle(puzzle);
-      setWords(puzzle.data.grid);
+      setGrid(puzzle.data.grid);
       setAnswers(puzzle.data.words);
+      setWords(puzzle.data.wordDetail);
     } catch (error) {
       setError(error);
     } finally {
@@ -153,8 +153,10 @@ const useBoard = (optionStates: any, callbacks: WordBoardCallback) => {
   };
 
   return ({
-    words,
+    isLoading,
+    grid,
     answers,
+    words,
     foundAnswers,
     start,
     move,

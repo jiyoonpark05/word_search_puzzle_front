@@ -14,8 +14,13 @@ export interface Word {
   path: Path[];
 }
 
+export interface WordDetails {
+  speech: string;
+  geschlecht: string;
+  word: string;
+  meaning: string;
+}
 export interface puzzleModel {
-  // grid: any;
   id: string;
   color_code: string;
   attempt_count: number;
@@ -30,9 +35,11 @@ export interface puzzleModel {
 export type windowWidth = number;
 
 export interface BoardProps {
-  words: Array<string[]>;
+  isLoading: boolean;
+  grid: Array<string[]>;
   answers: Word[];
   foundAnswers: Word[];
+  words: WordDetails[];
   start: Coordinate | null;
   move: Coordinate | null;
   disabled: boolean | null;

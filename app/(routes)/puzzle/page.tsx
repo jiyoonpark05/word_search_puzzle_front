@@ -25,19 +25,22 @@ const PlayPuzzle = () => {
   const board = useBoard(optionState, {});
   const DUMMY_WORDS = ["ORM", "PROGRAM", "WORLD"];
   let isReady = board.answers.length > 0;
+  console.log(board.words);
 
+  // show the words you need to find
   useEffect(() => {
     if (isReady) {
+      console.log(board);
       const element = (
         <GamePreview
-          words={DUMMY_WORDS}
+          words={board.words}
           handleClickGameStart={handleGameStart}
         />
       );
       setModalChild(element);
       openModal();
     }
-  }, []);
+  }, [isReady]);
 
   const handleGameStart = (e: React.MouseEvent) => {
     e.preventDefault();

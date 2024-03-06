@@ -72,6 +72,8 @@ const getPuzzle = async (optionState: Word) => {
     const randomWords = await callRandomWordsApi(optionState);
     const puzzle = await callPuzzleApi(randomWords);
 
+    puzzle.data = { ...puzzle.data, wordDetail: randomWords.words };
+
     return puzzle;
   } catch (error) {
     console.error("error fetching puzzle data", error);

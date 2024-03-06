@@ -7,7 +7,7 @@ import { BoardProps, HIGHLIGHT_COLOR } from "./puzzle.types";
 
 const Puzzle = ({ ...props }: BoardProps) => {
   const {
-    words,
+    grid,
     foundAnswers,
     start,
     move,
@@ -16,9 +16,8 @@ const Puzzle = ({ ...props }: BoardProps) => {
     handleFinished,
   } = props;
 
-  console.log(words);
-  let rowCount = words.length;
-  let columnCount = words[0].length;
+  let rowCount = grid.length;
+  let columnCount = grid[0].length;
   const gridRef = useRef<HTMLDivElement>(null);
 
   // cells from the puzzle board api
@@ -29,13 +28,13 @@ const Puzzle = ({ ...props }: BoardProps) => {
         const keyValue = `${x}-${y}`;
         cellList.push(
           <WordTile className={keyValue} key={keyValue} data-x={x} data-y={y}>
-            {words[y][x]}
+            {grid[y][x]}
           </WordTile>
         );
       }
     }
     return cellList;
-  }, [columnCount, rowCount, words]);
+  }, [columnCount, rowCount, grid]);
 
   const handleMouseDown = (e: any) => {
     const x: number = parseInt(e.target.getAttribute("data-x"), 10);
