@@ -21,7 +21,7 @@ const GamePreview = ({ words, handleClickGameStart }: gamePreviewProps) => {
         {words.map((word, idx) => {
           return (
             <>
-              <div className={common.word}>{idx}</div>
+              <div className={common.word}>{idx + 1}</div>
               <div className={common.word}>{word.speech}</div>
               <div className={common.word}>{word.word}</div>
               <div className={common.word}>{word.geschlecht}</div>

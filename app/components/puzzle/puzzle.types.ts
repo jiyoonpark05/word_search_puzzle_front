@@ -72,7 +72,7 @@ export interface TimerProps {
   initialDuration: number;
   isComplete: boolean;
   onFinish: () => void;
-  onClear: () => void;
+  onClear: (duration: number) => void;
 }
 
 // Sidebar

@@ -52,5 +52,5 @@ export const gameSettingState = atom({
 
 export const gameResultState = atom({
   key: "gameResultState",
-  default: { result: "", time: 0 },
+  default: { result: "", time: 0, correctCnt: 0, dateTime: "" },
 });

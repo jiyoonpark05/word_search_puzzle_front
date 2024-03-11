@@ -13,7 +13,7 @@ const callRandomWordsApi = async (optionState: Word) => {
   try {
     const response = await fetch(
       //   `${API.RANDOM_WORDS}lang=${optionState.lang}&level=${optionState.level}&cnt=${optionState.cnt}`,
-      `${API.RANDOM_WORDS}lang=en&level=A1&cnt=5`,
+      `${API.RANDOM_WORDS}lang=en&level=A1&cnt=3`,
       {
         method: "GET",
         cache: "no-store",

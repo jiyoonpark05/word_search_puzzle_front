@@ -65,9 +65,15 @@ export const modalName = style({
 export const message = style({
   textAlign: "center",
   color: "#837156",
+  maxWidth: "15rem",
   padding: "0.5rem 0 ",
 });
 
+export const messageAtag = style({
+  fontWeight: "500",
+  textDecoration: "underline",
+  cursor: "pointer",
+});
 // word list Modal
 
 export const wordContainer = style({

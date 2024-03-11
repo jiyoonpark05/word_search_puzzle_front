@@ -12,9 +12,10 @@ import * as css from "./gameClear.css";
 
 interface GameResultProps {
   result: "P" | "F"; //  Pass, Fail
+  noMoreRecord?: boolean; // if it's not a register user and already saved 7 records
 }
 
-const GameResult = (result: GameResultProps) => {
+const GameResult = ({ result, noMoreRecord }: GameResultProps) => {
   const { closeModal } = useModal();
   const router = useRouter();
   const [optionState, setOptionState] = useRecoilState(gameSettingState);
@@ -34,10 +35,13 @@ const GameResult = (result: GameResultProps) => {
   // move to Result page
   const handleClickMoveResult = () => {};
 
+  // move to Register page
+  const handleClickMoveRegister = () => {};
   return (
     <div>
-      {result.result === "P" ? (
+      {result === "P" ? (
         <>
+          <div className={common.message}>omg you made it man awesome!</div>
           <div className={css.resultContainer}>
             <div className={css.wrapper}>
               <div className={css.setting}>
@@ -50,15 +54,24 @@ const GameResult = (result: GameResultProps) => {
               </div>
               <div className={css.setting}>
                 <div className={css.settingTitle}>words:</div>
-                <div className={css.settingValue}>
-                  {optionState.cnt} / {optionState.cnt}
-                </div>
+                <div className={css.settingValue}>{gameResult.correctCnt}</div>
               </div>
             </div>
             <span className={css.bar} />
             <div className={css.time}>{formatTime(gameResult.time)}</div>
           </div>
-          <div className={common.message}>omg you made it man awesome!</div>
+          {noMoreRecord && (
+            <div className={common.message}>
+              If you want to record more result{" "}
+              <a
+                className={common.messageAtag}
+                onClick={handleClickMoveRegister}
+              >
+                Register
+              </a>{" "}
+              now!
+            </div>
+          )}
         </>
       ) : (
         <div className={common.message}>omg man you sucks</div>

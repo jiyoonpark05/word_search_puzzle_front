@@ -1,6 +1,4 @@
-import { gameResultState } from "@/app/recoil/atoms";
 import { useEffect, useState } from "react";
-import { useSetRecoilState } from "recoil";
 import { formatTime } from "../common/util";
 import { TimerProps } from "./puzzle.types";
 import * as css from "./time.css";
@@ -14,7 +12,6 @@ const Time = ({
 }: TimerProps) => {
   const [duration, setDuration] = useState(initialDuration);
   const [timmerFinished, setTimerFinished] = useState(false);
-  const setGameResult = useSetRecoilState(gameResultState);
 
   useEffect(() => {
     let timerId: string | number | NodeJS.Timer | undefined;
@@ -39,8 +36,8 @@ const Time = ({
   // stopping timer and Record play result
   const handleStopTimer = () => {
     setTimerFinished(true);
-    setGameResult({ result: "P", time: duration });
-    onClear();
+
+    onClear(duration);
   };
 
   return (
