@@ -36,7 +36,6 @@ const Time = ({
   // stopping timer and Record play result
   const handleStopTimer = () => {
     setTimerFinished(true);
-
     onClear(duration);
   };
 

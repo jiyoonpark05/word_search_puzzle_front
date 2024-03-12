@@ -1,22 +1,18 @@
 "use client";
 import * as css from "./page.css";
 import { useRouter } from "next/navigation";
-import Puzzle from "../../components/puzzle/puzzle";
-import { puzzleModel } from "@/app/components/puzzle/puzzle.types";
-import useBoard from "@/app/components/puzzle/useBoard.hook";
-import { useModal } from "@/app/components/useModal.hook";
 import { ReactNode, useEffect, useState } from "react";
+import { puzzleModel } from "@/app/components/puzzle/puzzle.types";
+import { useModal } from "@/app/components/useModal.hook";
 import { getDate } from "@/app/components/common/util";
 import Modal from "@/app/components/modal";
+import useBoard from "@/app/components/puzzle/useBoard.hook";
+import Puzzle from "../../components/puzzle/puzzle";
 import Time from "@/app/components/puzzle/time";
 import GameResult from "@/app/components/modalContents/gameResult";
 import GamePreview from "@/app/components/modalContents/gamePreview";
 import { gameResultState, gameSettingState } from "@/app/recoil/atoms";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-
-interface PuzzleProps {
-  puzzle: puzzleModel;
-}
+import { useRecoilState, useRecoilValue } from "recoil";
 
 const PlayPuzzle = () => {
   const router = useRouter();
@@ -25,10 +21,20 @@ const PlayPuzzle = () => {
   // const [size, setSize] = useState(window.innerWidth);
   const [gameStart, setGameStart] = useState(false);
   const optionState = useRecoilValue(gameSettingState);
-  const setGameResult = useSetRecoilState(gameResultState);
-  const gameResult = useRecoilValue(gameResultState);
+  const [gameResult, setGameResult] = useRecoilState(gameResultState);
   const board = useBoard(optionState, {});
+
+  const timeSetByDifficulty =
+    optionState.diff === "1"
+      ? 60
+      : optionState.diff === "2"
+      ? 180
+      : optionState.diff === "3"
+      ? 270
+      : 0;
+
   let isReady = board.answers.length > 0;
+  let noMoreRecord = false;
 
   // show the words you need to find
   useEffect(() => {
@@ -44,6 +50,18 @@ const PlayPuzzle = () => {
     }
   }, [isReady]);
 
+  useEffect(() => {
+    if (gameResult.result !== "") {
+      // if it's not a registerd User
+      saveLocalStorage();
+      // if it's a registered User
+
+      const element = <GameResult result="P" noMoreRecord={noMoreRecord} />;
+      setModalChild(element);
+      openModal();
+    }
+  }, [gameResult]);
+
   const handleGameStart = (e: React.MouseEvent) => {
     e.preventDefault();
     setGameStart(true);
@@ -57,44 +75,41 @@ const PlayPuzzle = () => {
     openModal();
   };
 
-  const saveGameResultData = (parsedRecordData: object[]) => {
-    parsedRecordData.push(gameResult);
-    localStorage.setItem("puzzleUserRecord", JSON.stringify(parsedRecordData));
-  };
-
   const handleGameClear = (duration: number) => {
-    let noMoreRecord = false;
-
     setGameResult({
       result: "P",
-      time: duration,
+      time: timeSetByDifficulty - duration,
       correctCnt: board.foundAnswers.length,
       dateTime: getDate(),
     });
+    setGameStart(false);
+  };
 
-    // if it's not a registerd User (it allows Maximum 7 records)
-    // [TODO] 1. if it's not a registerd User
-    // 2. and it already has 7 records
+  // save record for non-registed User
+  const saveLocalStorage = () => {
     const userRecord = localStorage.getItem("puzzleUserRecord");
+    let recordData = [];
+
+    // parse existing records if available
     if (userRecord) {
-      const parsedRecordData = JSON.parse(userRecord);
-      const dataLength = parsedRecordData.length;
-      noMoreRecord = dataLength === 7 ? true : false;
-      saveGameResultData(parsedRecordData);
+      recordData = JSON.parse(userRecord);
     }
 
-    // [TODO] if it's a registed User, Save result into Data
+    // non-register User allows to stack Maximum 7 records
+    noMoreRecord = recordData.length === 7;
 
-    setGameStart(false);
-    const element = <GameResult result="P" noMoreRecord={noMoreRecord} />;
-    setModalChild(element);
-    openModal();
+    if (!noMoreRecord) {
+      recordData.push(gameResult);
+    }
+
+    localStorage.setItem("puzzleUserRecord", JSON.stringify(recordData));
   };
 
   // if there are no game setting info let player go back to the first page
   if (optionState.lang === "" && optionState.level === "") {
     router.push(`/`);
   }
+
   if (isReady) {
     const answerArray = new Set(board.foundAnswers.map((item) => item.word));
     const wordList = board.answers.map((el) => {
@@ -123,7 +138,7 @@ const PlayPuzzle = () => {
           <Puzzle {...board} />
           <Time
             isStart={gameStart}
-            initialDuration={60}
+            initialDuration={timeSetByDifficulty}
             isComplete={isComplete}
             onClear={handleGameClear}
             onFinish={handleTimerFinish}
