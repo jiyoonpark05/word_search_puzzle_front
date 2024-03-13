@@ -26,7 +26,7 @@ const PlayPuzzle = () => {
 
   const timeSetByDifficulty =
     optionState.diff === "1"
-      ? 60
+      ? 180
       : optionState.diff === "2"
       ? 180
       : optionState.diff === "3"
