@@ -6,6 +6,7 @@ import {
   senarioState,
   UserNameState,
 } from "../../recoil/atoms";
+import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import * as css from "./textArea.css";
 import defaultBubble from "@public/images/textbubble_default.png";
@@ -22,6 +23,8 @@ const languageList = [
 ];
 
 const TextArea = () => {
+  const { t } = useTranslation("common");
+
   const [state, setState] = useRecoilState(listeningState);
   const [senario, setSenario] = useRecoilState(senarioState);
   const [bunny, setBunny] = useRecoilState(bunnyState);
@@ -30,6 +33,13 @@ const TextArea = () => {
   const [userNameInput, setUserNameInput] = useState("");
   const [optionState, setOptionState] = useRecoilState(gameSettingState);
   const { isOpen, openModal, closeModal } = useModal();
+  const textArry = {
+    greeting: t(`greeting`),
+    askName: t("askName"),
+    reaction: t("askName", { userName }),
+    recognize: t("askName", { userName }),
+    chooseType: t("chooseType"),
+  };
 
   useEffect(() => {
     switch (senario) {
@@ -68,14 +78,6 @@ const TextArea = () => {
       default:
     }
   }, [senario]);
-
-  const textArry = {
-    greeting: "welcome to Puzzle forrest",
-    askName: "How Do I call you?",
-    reaction: "oh, <USERNAME> it's a beautiful name",
-    recognize: "oh, <USERNAME> it's glad to see you again",
-    chooseType: "awesome, what do you want for today?",
-  };
 
   // handle User name with local storage.
   const handleSubmitName = () => {

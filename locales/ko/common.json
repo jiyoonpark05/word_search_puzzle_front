@@ -1,0 +1,10 @@
+{
+  "Japanese": "일본어",
+  "English": "영어",
+  "Korean": "한국어",
+  "greeting": "어서오세요 퍼즐의 숲에",
+  "askName": "제가 뭐라고 부르면 좋을까요?",
+  "reaction": "와, {{userName}}님 멋진 이름이에요",
+  "recognize": "와, {{userName}}님 다시 만나뵙게 되어 기뻐요",
+  "chooseType": "멋져요! 오늘은 어떤 퍼즐을 풀어볼까요?"
+}

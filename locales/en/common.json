@@ -1,0 +1,9 @@
+{
+  "English": "english",
+  "Korean": "Korean",
+  "greeting": "Welcome to Puzzle forest!",
+  "askName": "How Do I call you?",
+  "reaction": "oh, {{userName}} it's a beautiful nam",
+  "recognize": "oh,{{userName}} it's glad to see you again",
+  "chooseType": "awesome, what do you want for today?"
+}

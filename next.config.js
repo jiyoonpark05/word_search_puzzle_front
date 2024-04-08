@@ -1,10 +1,12 @@
 const { createVanillaExtractPlugin } = require("@vanilla-extract/next-plugin");
-const { isReadonlyKeywordOrPlusOrMinusToken } = require("typescript");
 const withVanillaExtract = createVanillaExtractPlugin();
 
 /** R3F */
 const withTM = require("next-transpile-modules")(["three"]);
 module.exports = withTM();
+
+/** next-translate */
+const nextTranslate = require("next-translate-plugin");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -20,4 +22,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withVanillaExtract(nextConfig);
+module.exports = withVanillaExtract(nextTranslate(nextConfig));

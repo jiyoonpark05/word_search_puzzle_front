@@ -5,7 +5,13 @@ type Word = {
   level: string;
   cnt: number;
   diff?: string;
-  words?: Array<{ speech: string; geschlecht: string; word: string }>;
+  words?: Array<{
+    speech: string;
+    gender: string;
+    word: string;
+    koreanMeaning: string;
+    englishMeaning: string;
+  }>;
 };
 
 // generate Random words

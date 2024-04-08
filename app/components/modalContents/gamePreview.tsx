@@ -19,13 +19,14 @@ const GamePreview = ({ words, handleClickGameStart }: gamePreviewProps) => {
         <div className={common.wordGridHeader}></div>
         <div className={common.wordGridHeader}>meaning</div>
         {words.map((word, idx) => {
+          console.log(word);
           return (
             <>
               <div className={common.word}>{idx + 1}</div>
               <div className={common.word}>{word.speech}</div>
               <div className={common.word}>{word.word}</div>
-              <div className={common.word}>{word.geschlecht}</div>
-              <div className={common.word}>{word.meaning}뜻인데</div>
+              <div className={common.word}>{word.gender}</div>
+              <div className={common.word}>{word.koreanMeaning}</div>
             </>
           );
         })}

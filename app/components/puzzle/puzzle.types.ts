@@ -15,10 +15,11 @@ export interface Word {
 }
 
 export interface WordDetails {
+  gender: string;
   speech: string;
-  geschlecht: string;
   word: string;
-  meaning: string;
+  koreanMeaning: string;
+  englishMeaning: string;
 }
 export interface puzzleModel {
   id: string;
