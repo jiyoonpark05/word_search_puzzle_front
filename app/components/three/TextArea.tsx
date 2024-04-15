@@ -33,6 +33,7 @@ const TextArea = () => {
   const [userNameInput, setUserNameInput] = useState("");
   const [optionState, setOptionState] = useRecoilState(gameSettingState);
   const { isOpen, openModal, closeModal } = useModal();
+
   const textArry = {
     greeting: t(`greeting`),
     askName: t("askName"),

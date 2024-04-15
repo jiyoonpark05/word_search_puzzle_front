@@ -2,7 +2,6 @@
 import * as css from "./page.css";
 import { useRouter } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
-import { puzzleModel } from "@/app/components/puzzle/puzzle.types";
 import { useModal } from "@/app/components/useModal.hook";
 import { getDate } from "@/app/components/common/util";
 import Modal from "@/app/components/modal";

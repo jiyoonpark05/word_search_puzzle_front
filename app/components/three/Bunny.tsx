@@ -7,60 +7,61 @@ import React, { useEffect, useRef, useState } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { bunnyState, senarioState } from "../../recoil/atoms";
 import { useRecoilState } from "recoil";
-import { setSourceMapRange } from "typescript";
+import { AnimationAction, AnimationClip } from "three";
 
 type GLTFResult = {
-  nodes: {
-    Pyramid: THREE.Mesh;
-  };
-  materials: {
-    ["default"]: THREE.MeshStandardMaterial;
-  };
+  nodes: Record<string, THREE.Mesh>;
+  materials: Record<string, THREE.MeshStandardMaterial>;
+  animations: AnimationClip[];
 };
 export function Bunny(props: any) {
   const [state, setState] = useRecoilState(bunnyState);
   const [senario, setSenario] = useRecoilState(senarioState);
 
-  const group = useRef();
-  const { nodes, materials, animations } = useGLTF(
+  const group = useRef<THREE.Group>();
+  const { nodes, materials, animations } = (useGLTF(
     "/models/Bunny.gltf"
-  ) as GLTFResult;
-
+  ) as unknown) as GLTFResult;
   const { actions } = useAnimations(animations, group);
-  console.log(actions);
 
   useEffect(() => {
-    // default movement
-    if (state === "default") {
-      actions["Idle"]?.reset().fadeIn(0.5).play();
-      return () => actions["Idle"]?.fadeOut(0.5);
+    let cleanupFunction: () => void; // Define the cleanup function variable
+
+    switch (state) {
+      case "default":
+        actions["Idle"]?.reset().fadeIn(0.5).play();
+        cleanupFunction = () => actions["Idle"]?.fadeOut(0.5); // Assign the cleanup function
+        break;
+
+      // say Hi when it clicked
+      case "greeting":
+        if (actions["Idle"]) {
+          actions["Idle"].reset().fadeIn(0.5).stop();
+        }
+        actions["Wave"]?.reset().fadeIn(0.5).play();
+        if (senario === 0) setSenario(1);
+        setTimeout(() => {
+          actions["Wave"]?.reset().fadeOut(0.5).stop();
+          setState("default");
+        }, 1500);
+        cleanupFunction = () => actions["Wave"]?.fadeOut(0.5);
+        break;
+
+      case "askName":
+        actions["Idle"]?.reset().fadeIn(0.5).stop();
+        actions["Weapon"]?.reset().fadeIn(0.5).play();
+        setTimeout(() => {
+          actions["Weapon"]?.reset().fadeOut(0.5).stop();
+          setState("default");
+        }, 800);
+        cleanupFunction = () => actions["Weapon"]?.fadeOut(0.5);
+        break;
+
+      default:
+        cleanupFunction = () => {};
+        break;
     }
-    // say Hi when it clicked
-    if (state === "greeting") {
-      actions["Idle"]?.reset().fadeIn(0.5).stop();
-      actions["Wave"]?.reset().fadeIn(0.5).play();
-
-      if (senario === 0) setSenario(1);
-
-      setTimeout(() => {
-        actions["Wave"]?.reset().fadeOut(0.5).stop();
-        setState("default");
-      }, 1500);
-
-      return () => actions["Wave"]?.fadeOut(0.5);
-    }
-    // ask user Name
-    if (state === "askName") {
-      actions["Idle"]?.reset().fadeIn(0.5).stop();
-      actions["Weapon"]?.reset().fadeIn(0.5).play();
-    }
-    setTimeout(() => {
-      actions["Weapon"]?.reset().fadeOut(0.5).stop();
-      setState("default");
-    }, 800);
-
-    return () => actions["Weapon"]?.fadeOut(0.5);
-  }, [state]);
+  }, [state, senario, actions]);
 
   return (
     <group
@@ -77,25 +78,25 @@ export function Bunny(props: any) {
               name="Cube074"
               geometry={nodes.Cube074.geometry}
               material={materials.Bunny_Main}
-              skeleton={nodes.Cube074.skeleton}
+              skeleton={(nodes.Cube074 as any).skeleton}
             />
             <skinnedMesh
               name="Cube074_1"
               geometry={nodes.Cube074_1.geometry}
               material={materials.Bunny_Secondary}
-              skeleton={nodes.Cube074_1.skeleton}
+              skeleton={(nodes.Cube074_1 as any).skeleton}
             />
             <skinnedMesh
               name="Cube074_2"
               geometry={nodes.Cube074_2.geometry}
               material={materials.Eye_Black}
-              skeleton={nodes.Cube074_2.skeleton}
+              skeleton={(nodes.Cube074_2 as any).skeleton}
             />
             <skinnedMesh
               name="Cube074_3"
               geometry={nodes.Cube074_3.geometry}
               material={materials.Eye_White}
-              skeleton={nodes.Cube074_3.skeleton}
+              skeleton={(nodes.Cube074_3 as any).skeleton}
             />
           </group>
           <group name="Carrot">
@@ -103,13 +104,13 @@ export function Bunny(props: any) {
               name="Cube077"
               geometry={nodes.Cube077.geometry}
               material={materials["Material.024"]}
-              skeleton={nodes.Cube077.skeleton}
+              skeleton={(nodes.Cube077 as any).skeleton}
             />
             <skinnedMesh
               name="Cube077_1"
               geometry={nodes.Cube077_1.geometry}
               material={materials["Material.011"]}
-              skeleton={nodes.Cube077_1.skeleton}
+              skeleton={(nodes.Cube077_1 as any).skeleton}
             />
           </group>
         </group>

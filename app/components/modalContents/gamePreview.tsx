@@ -2,7 +2,7 @@ import * as common from "../modal.css";
 import { WordDetails } from "../puzzle/puzzle.types";
 
 interface gamePreviewProps {
-  words: [WordDetails];
+  words: WordDetails[];
   handleClickGameStart: any;
 }
 

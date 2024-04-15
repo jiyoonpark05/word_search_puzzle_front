@@ -9,7 +9,7 @@ type WordBoardCallback = {
 
 const useBoard = (optionStates: any, callbacks: WordBoardCallback) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | unknown>(null);
 
   const [grid, setGrid] = useState<Array<string[][]>>([]);
   const [answers, setAnswers] = useState<Word[]>([]); // word with path on Grid
@@ -163,7 +163,6 @@ const useBoard = (optionStates: any, callbacks: WordBoardCallback) => {
     handleStart,
     handleMove,
     handleFinished,
-    // setWordBoard,
     setFoundAnswer,
   } as unknown) as BoardProps;
 };

@@ -46,6 +46,7 @@ export interface BoardProps {
   disabled: boolean | null;
   handleStart: (coord: Coordinate) => void;
   handleMove: (coord: Coordinate) => void;
+  handleFinished: () => void;
   handleGameClear: () => void;
   handleTimerFinish: () => void;
   setWordBoard: (wordSearch: puzzleModel) => void;
